@@ -8,49 +8,51 @@ import {
     Mail,
     Code2,
     Lock,
-    ArrowUpRight
+    ArrowUpRight,
+    Heart
 } from "lucide-react";
 
 const Footer = () => {
     const socialLinks = [
         {
             name: "GitHub",
-            icon: <Github size={20} />,
+            icon: <Github size={18} />,
             url: "https://github.com/yourusername",
             color: "hover:bg-gray-700"
         },
         {
             name: "LinkedIn",
-            icon: <Linkedin size={20} />,
+            icon: <Linkedin size={18} />,
             url: "https://linkedin.com/in/yourprofile",
             color: "hover:bg-blue-600"
         },
         {
             name: "Twitter",
-            icon: <Twitter size={20} />,
+            icon: <Twitter size={18} />,
             url: "https://twitter.com/yourhandle",
             color: "hover:bg-blue-400"
         },
         {
             name: "Email",
-            icon: <Mail size={20} />,
+            icon: <Mail size={18} />,
             url: "mailto:your@email.com",
             color: "hover:bg-red-500"
         }
     ];
 
     const footerLinks = [
-        { name: "Home", path: "/" },
-        { name: "Projects", path: "/projects" },
-        { name: "Blog", path: "/blog" },
-        { name: "Contact", path: "/contact" }
+        { name: "Home", path: "/", icon: <ArrowUpRight size={14} /> },
+        { name: "Projects", path: "/projects", icon: <ArrowUpRight size={14} /> },
+        { name: "Blog", path: "/blog", icon: <ArrowUpRight size={14} /> },
+        { name: "Contact", path: "/contact", icon: <ArrowUpRight size={14} /> },
+        { name: "Admin", path: "/auth/admin-login", icon: <Lock size={14} /> }
     ];
 
     return (
-        <footer className="relative bg-gradient-to-b from-gray-900 to-gray-950 border-t border-gray-800 pt-16 pb-8 overflow-hidden">
-            {/* Floating tech icons */}
-            <div className="absolute inset-0 overflow-hidden opacity-20">
-                {[...Array(8)].map((_, i) => (
+        <footer className="relative bg-gradient-to-b from-gray-900 to-gray-950 pt-20 pb-12 overflow-hidden">
+            {/* Floating tech elements */}
+            <div className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none">
+                {[...Array(12)].map((_, i) => (
                     <motion.div
                         key={i}
                         className="absolute text-blue-400"
@@ -59,50 +61,55 @@ const Footer = () => {
                             left: `${Math.random() * 80 + 10}%`
                         }}
                         animate={{
-                            y: [0, -20, 0],
-                            rotate: [0, i % 2 === 0 ? 15 : -15, 0],
-                            opacity: [0.3, 0.7, 0.3]
+                            y: [0, -15, 0],
+                            rotate: [0, i % 2 === 0 ? 10 : -10, 0],
+                            opacity: [0.2, 0.5, 0.2]
                         }}
                         transition={{
-                            duration: 15 + i * 3,
+                            duration: 12 + i * 2,
                             repeat: Infinity,
                             repeatType: "reverse",
-                            delay: i * 0.5
+                            delay: i * 0.3
                         }}
                     >
-                        <Code2 size={24} />
+                        <Code2 size={20} />
                     </motion.div>
                 ))}
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
-                {/* Main footer content */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                {/* Main content */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
                     {/* Brand info */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
-                        className="space-y-4"
+                        className="space-y-5"
                     >
-                        <div className="flex items-center gap-2">
-                            <Code2 className="text-blue-400" size={24} />
+                        <div className="flex items-center gap-3">
+                            <motion.div
+                                whileHover={{ rotate: 15, scale: 1.1 }}
+                                className="p-2 bg-blue-600/20 rounded-lg"
+                            >
+                                <Code2 className="text-blue-400" size={24} />
+                            </motion.div>
                             <span className="text-xl font-bold text-white">Razu.dev</span>
                         </div>
-                        <p className="text-gray-400">
-                            Crafting modern web applications with the MERN stack and beyond.
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                            Crafting high-performance web applications with modern technologies and clean code.
                         </p>
-                        <div className="flex gap-4">
+                        <div className="flex gap-3">
                             {socialLinks.map((social, i) => (
                                 <motion.a
                                     key={i}
-                                    whileHover={{ y: -3 }}
-                                    whileTap={{ scale: 0.95 }}
+                                    whileHover={{ y: -3, scale: 1.1 }}
+                                    whileTap={{ scale: 0.9 }}
                                     href={social.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className={`p-2 rounded-full bg-gray-800 text-white transition-colors ${social.color}`}
+                                    className={`p-2.5 rounded-full bg-gray-800 text-white transition-all ${social.color}`}
                                     aria-label={social.name}
                                 >
                                     {social.icon}
@@ -111,26 +118,30 @@ const Footer = () => {
                         </div>
                     </motion.div>
 
-                    {/* Quick links */}
+                    {/* Navigation links */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.1 }}
                         viewport={{ once: true }}
                     >
-                        <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
-                        <ul className="space-y-2">
+                        <h3 className="text-lg font-semibold text-white mb-6 pb-2 border-b border-gray-800 inline-block">
+                            Navigation
+                        </h3>
+                        <ul className="space-y-3">
                             {footerLinks.map((link, i) => (
                                 <motion.li
                                     key={i}
                                     whileHover={{ x: 5 }}
-                                    transition={{ type: "spring", stiffness: 300 }}
+                                    transition={{ type: "spring", stiffness: 400 }}
                                 >
                                     <Link
                                         to={link.path}
-                                        className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-1"
+                                        className="text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2 group"
                                     >
-                                        <ArrowUpRight size={14} />
+                                        <span className="group-hover:translate-x-1 transition-transform">
+                                            {link.icon}
+                                        </span>
                                         {link.name}
                                     </Link>
                                 </motion.li>
@@ -138,47 +149,92 @@ const Footer = () => {
                         </ul>
                     </motion.div>
 
-                    {/* Admin section */}
+                    {/* Contact info */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                         viewport={{ once: true }}
                     >
-                        <h3 className="text-lg font-semibold text-white mb-4">Admin</h3>
-                        <motion.div
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="inline-block"
-                        >
-                            <Link
-                                to="/auth/admin-login"
-                                className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-white transition-colors"
-                            >
-                                <Lock size={18} />
-                                Admin Login
-                            </Link>
-                        </motion.div>
+                        <h3 className="text-lg font-semibold text-white mb-6 pb-2 border-b border-gray-800 inline-block">
+                            Contact
+                        </h3>
+                        <address className="not-italic text-gray-400 space-y-4">
+                            <div className="flex items-start gap-3">
+                                <Mail className="text-blue-400 mt-0.5 flex-shrink-0" size={18} />
+                                <a
+                                    href="mailto:your@email.com"
+                                    className="hover:text-blue-400 transition-colors"
+                                >
+                                    your@email.com
+                                </a>
+                            </div>
+                            <p className="flex items-start gap-3">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="text-blue-400 mt-0.5 flex-shrink-0"
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Dhaka, Bangladesh</span>
+                            </p>
+                            <p className="flex items-start gap-3">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="text-blue-400 mt-0.5 flex-shrink-0"
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>Available for freelance work</span>
+                            </p>
+                        </address>
                     </motion.div>
 
-                    {/* Contact info */}
+                    {/* Newsletter */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
                         viewport={{ once: true }}
                     >
-                        <h3 className="text-lg font-semibold text-white mb-4">Get in Touch</h3>
-                        <address className="not-italic text-gray-400 space-y-2">
-                            <p>Dhaka, Bangladesh</p>
-                            <a
-                                href="mailto:your@email.com"
-                                className="hover:text-blue-400 transition-colors"
+                        <h3 className="text-lg font-semibold text-white mb-6 pb-2 border-b border-gray-800 inline-block">
+                            Newsletter
+                        </h3>
+                        <p className="text-gray-400 text-sm mb-4">
+                            Subscribe to get updates on new projects and articles.
+                        </p>
+                        <form className="space-y-3">
+                            <input
+                                type="email"
+                                placeholder="Your email"
+                                className="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            />
+                            <motion.button
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 0.98 }}
+                                type="submit"
+                                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white py-2.5 px-4 rounded-lg transition-all"
                             >
-                                your@email.com
-                            </a>
-                            <p>Available for freelance work</p>
-                        </address>
+                                Subscribe
+                            </motion.button>
+                        </form>
                     </motion.div>
                 </div>
 
@@ -188,23 +244,25 @@ const Footer = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                     viewport={{ once: true }}
-                    className="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm"
+                    className="pt-8 border-t border-gray-800 flex items-center justify-center  text-center"
                 >
-                    <p>
+                    <p className="text-gray-500 text-sm text-center md:text-left">
                         © {new Date().getFullYear()} Mobarak Hossain Razu. All rights reserved.
                     </p>
-                    <p className="mt-1">
-                        Built with React, Tailwind CSS, and Framer Motion
-                    </p>
+
                 </motion.div>
             </div>
 
             {/* Back to top button */}
             <motion.button
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="fixed bottom-6 right-6 p-3 bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg z-50"
+                transition={{ duration: 0.3 }}
+                viewport={{ once: true }}
+                className="fixed bottom-6 right-6 p-3 bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 rounded-full shadow-lg z-50 flex items-center justify-center"
                 aria-label="Back to top"
             >
                 <svg

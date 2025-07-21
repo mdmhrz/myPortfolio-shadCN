@@ -3,6 +3,8 @@ import { Menu } from "lucide-react";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle"; // your ModeToggle path
+import { Code2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
     const navLinks = [
@@ -17,7 +19,15 @@ export default function Navbar() {
             <div className="w-11/12 mx-auto px-4 py-3 flex items-center justify-between">
                 {/* Logo */}
                 <Link to="/" className="text-xl font-bold tracking-tight text-primary">
-                    Razu.dev
+                    <div className="flex items-center gap-3">
+                        <motion.div
+                            whileHover={{ rotate: 15, scale: 1.1 }}
+                            className="p-2 bg-blue-600/20 rounded-lg"
+                        >
+                            <Code2 className="text-blue-400" size={24} />
+                        </motion.div>
+                        <span className="text-xl font-bold text-white">Razu.dev</span>
+                    </div>
                 </Link>
 
                 {/* Desktop Nav */}

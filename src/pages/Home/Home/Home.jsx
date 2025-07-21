@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-import AboutMe from '../AboutMe/AboutMe';
+import AboutMe from '../MyJourney/MyJourney';
 import Skills from '../Skills/Skills';
 import Projects from '../Projects/Projects';
 import Blog from '../Blogs/Blogs';

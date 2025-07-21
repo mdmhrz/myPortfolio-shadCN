@@ -74,8 +74,8 @@ const Testimonials = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-                        Client <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-500">Testimonials</span>
+                    <h2 className="heading">
+                        <span className="gradient-text">Client Testimonials</span>
                     </h2>
                     <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                         What people say about working with me

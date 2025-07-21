@@ -11,7 +11,7 @@ const projects = [
         description: "A hostel management system with meal tracking, rider delivery, admin dashboard, and user earnings system.",
         image: hallPointImg,
         links: {
-            live: "https://hallpoint.example.com",
+            live: "https://hall-point.web.app/",
             client: "https://github.com/yourname/hallpoint-client",
             server: "https://github.com/yourname/hallpoint-server"
         },
@@ -75,8 +75,8 @@ const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
             >
-                <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-3">
-                    My Projects
+                <h2 className="heading">
+                    <span className="gradient-text">My Projects</span>
                 </h2>
                 <p className="text-gray-500 dark:text-gray-300 max-w-xl mx-auto">
                     Explore real-world full-stack apps built with modern technologies

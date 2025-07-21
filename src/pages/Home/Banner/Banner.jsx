@@ -23,6 +23,7 @@ import {
     Github,
     Twitter
 } from "lucide-react";
+import CustomButton from "../../../components/ui/CustomButton";
 
 const MERNStackIcons = [
     {
@@ -85,30 +86,23 @@ const MERNStackIcons = [
 
 const socialLinks = [
     {
-        icon: <Linkedin size={20} />,
-        name: "LinkedIn",
-        url: "https://linkedin.com/in/yourprofile",
-        lightColor: "bg-blue-600 hover:bg-blue-700",
-        darkColor: "bg-blue-500 hover:bg-blue-600"
-    },
-    {
         icon: <Github size={20} />,
         name: "GitHub",
-        url: "https://github.com/yourprofile",
+        url: "https://github.com/mdmhrz",
         lightColor: "bg-gray-800 hover:bg-gray-700",
         darkColor: "bg-gray-700 hover:bg-gray-600"
     },
     {
-        icon: <Twitter size={20} />,
-        name: "Twitter",
-        url: "https://twitter.com/yourprofile",
-        lightColor: "bg-blue-400 hover:bg-blue-500",
-        darkColor: "bg-blue-500 hover:bg-blue-400"
+        icon: <Linkedin size={20} />,
+        name: "LinkedIn",
+        url: "https://linkedin.com/in/mdmhrz",
+        lightColor: "bg-blue-600 hover:bg-blue-700",
+        darkColor: "bg-blue-500 hover:bg-blue-600"
     },
     {
         icon: <Mail size={20} />,
         name: "Email",
-        url: "mailto:your@email.com",
+        url: "razufreelance@gmail.com",
         lightColor: "bg-red-500 hover:bg-red-600",
         darkColor: "bg-red-600 hover:bg-red-500"
     }
@@ -222,14 +216,7 @@ const Banner = () => {
 
                     {/* Contact CTA */}
                     <div className="flex flex-wrap gap-4 mb-6">
-                        <motion.a
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            href="#contact"
-                            className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 dark:from-blue-500 dark:to-purple-500 dark:hover:from-blue-600 dark:hover:to-purple-600 rounded-lg text-white font-semibold shadow-lg transition-all"
-                        >
-                            Hire Me
-                        </motion.a>
+                        <CustomButton text={'Hire Me'}></CustomButton>
                         <motion.a
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
@@ -313,7 +300,7 @@ const Banner = () => {
                         {/* Experience badge */}
                         <motion.div
                             whileHover={{ scale: 1.1 }}
-                            className="absolute -bottom-5 -right-5 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-500 text-white px-4 py-2 rounded-lg shadow-xl flex items-center gap-2"
+                            className="absolute -bottom-5 -right-5 bg-gradient-to-r from-purple-600 to-slate-900 dark:from-purple-600 dark:to-slate-900 text-white px-4 py-2 rounded-lg shadow-xl flex items-center gap-2"
                         >
                             <CalendarCheck size={18} />
                             <span>5+ Years Exp</span>

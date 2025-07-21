@@ -35,8 +35,8 @@ const Contact = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-                        Get In Touch
+                    <h2 className="heading">
+                        <span className="gradient-text">Get In Touch</span>
                     </h2>
                     <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                         Have a project in mind or want to collaborate? Feel free to reach out.

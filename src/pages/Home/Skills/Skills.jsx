@@ -160,8 +160,8 @@ const Skills = () => {
                     viewport={{ once: true }}
                     className="text-center mb-20"
                 >
-                    <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
-                        Technical Expertise
+                    <h2 className="heading">
+                        <span className="gradient-text">Technical Expertise</span>
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                         The tools and technologies I use to build modern, scalable web applications

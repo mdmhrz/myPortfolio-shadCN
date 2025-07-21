@@ -5,10 +5,13 @@ import {
     FaGitAlt,
     FaHtml5,
     FaCss3Alt,
+    FaFilePdf,
+    FaFileWord,
+    FaFileExcel,
+    FaFilePowerpoint,  // valid react-icons/fa icon for Acrobat
 } from "react-icons/fa";
 import {
     SiJavascript,
-    SiTypescript,
     SiNextdotjs,
     SiTailwindcss,
     SiFigma,
@@ -26,8 +29,9 @@ import {
     SiStorybook,
     SiEslint,
     SiPrettier,
+    SiAdobephotoshop,
+    SiAdobeillustrator,
 } from "react-icons/si";
-import { TbBrandRadixUi } from "react-icons/tb";
 
 const ShadCNIcon = ({ size = 28, className = "" }) => (
     <svg
@@ -107,6 +111,18 @@ const categories = [
             { name: "Storybook", icon: <SiStorybook className="text-pink-500" /> },
             { name: "ESLint", icon: <SiEslint className="text-purple-500" /> },
             { name: "Prettier", icon: <SiPrettier className="text-amber-700" /> },
+        ],
+    },
+    {
+        title: "Additional Tools & Software",
+        description: "Professional tools for documentation, design, and presentations",
+        skills: [
+            { name: "Microsoft Word", icon: <FaFileWord className="text-blue-700" /> },
+            { name: "Microsoft Excel", icon: <FaFileExcel className="text-green-600" /> },
+            { name: "PowerPoint", icon: <FaFilePowerpoint className="text-red-600" /> },
+            { name: "Adobe Photoshop", icon: <SiAdobephotoshop className="text-blue-800" /> },
+            { name: "Adobe Illustrator", icon: <SiAdobeillustrator className="text-orange-500" /> },
+            { name: "Adobe Acrobat", icon: <FaFilePdf className="text-red-700" /> },
         ],
     },
 ];

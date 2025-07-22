@@ -27,6 +27,7 @@ export default function Navbar() {
                             <Code2 className="text-blue-400" size={24} />
                         </motion.div>
                         <span className="text-2xl font-bold text-white ">Razu.dev</span>
+
                     </div>
                 </Link>
 

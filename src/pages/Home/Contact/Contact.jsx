@@ -71,7 +71,7 @@ const Contact = () => {
                                 <div>
                                     <h4 className="font-semibold text-xl mb-1">Address</h4>
                                     <p className="text-gray-600 dark:text-gray-400">
-                                        123 React St., Web City, Internet
+                                        Pahartali, Chattogram, Bangladesh
                                     </p>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@ const Contact = () => {
                                         href="tel:+1234567890"
                                         className="text-indigo-600 dark:text-indigo-400 hover:underline"
                                     >
-                                        +1 (234) 567-890
+                                        +880 1824975616
                                     </a>
                                 </div>
                             </div>
@@ -103,7 +103,7 @@ const Contact = () => {
                                         href="mailto:hello@reactdev.com"
                                         className="text-pink-600 dark:text-pink-400 hover:underline"
                                     >
-                                        hello@reactdev.com
+                                        razufreelance@gmail.com
                                     </a>
                                 </div>
                             </div>

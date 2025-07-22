@@ -11,31 +11,26 @@ import {
     ArrowUpRight,
     Heart
 } from "lucide-react";
+import CustomButton from "../components/ui/CustomButton";
 
 const Footer = () => {
     const socialLinks = [
         {
             name: "GitHub",
             icon: <Github size={18} />,
-            url: "https://github.com/yourusername",
+            url: "https://github.com/mdmhrz",
             color: "hover:bg-gray-700"
         },
         {
             name: "LinkedIn",
             icon: <Linkedin size={18} />,
-            url: "https://linkedin.com/in/yourprofile",
+            url: "https://linkedin.com/in/mdmhrz",
             color: "hover:bg-blue-600"
-        },
-        {
-            name: "Twitter",
-            icon: <Twitter size={18} />,
-            url: "https://twitter.com/yourhandle",
-            color: "hover:bg-blue-400"
         },
         {
             name: "Email",
             icon: <Mail size={18} />,
-            url: "mailto:your@email.com",
+            url: "razufreelance@gmail.com",
             color: "hover:bg-red-500"
         }
     ];
@@ -166,7 +161,7 @@ const Footer = () => {
                                     href="mailto:your@email.com"
                                     className="hover:text-blue-400 transition-colors"
                                 >
-                                    your@email.com
+                                    razufreelance@gmail.com
                                 </a>
                             </div>
                             <p className="flex items-start gap-3">
@@ -185,7 +180,7 @@ const Footer = () => {
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                     <circle cx="12" cy="10" r="3"></circle>
                                 </svg>
-                                <span>Dhaka, Bangladesh</span>
+                                <span>Chattogram, Bangladesh</span>
                             </p>
                             <p className="flex items-start gap-3">
                                 <svg
@@ -226,14 +221,14 @@ const Footer = () => {
                                 placeholder="Your email"
                                 className="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                             />
-                            <motion.button
+                            <motion.div
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 type="submit"
-                                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white py-2.5 px-4 rounded-lg transition-all"
+                                className=""
                             >
-                                Subscribe
-                            </motion.button>
+                                <CustomButton conditional={'w-full py-2'} text={'Subscribe'}></CustomButton>
+                            </motion.div>
                         </form>
                     </motion.div>
                 </div>

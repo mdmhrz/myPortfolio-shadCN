@@ -6,47 +6,52 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import munnaImage from "../../../assets/clients/munna.jpg";
+import tashdidImage from "../../../assets/clients/tashdid.jpg";
+import shuvoImage from "../../../assets/clients/shuvo.jpg";
+import robiulImage from "../../../assets/clients/robiul.jpg";
+import tanvirImage from "../../../assets/clients/tasbin.jpg";
 
 const testimonials = [
     {
         id: 1,
-        name: "Sarah Johnson",
-        role: "CTO at TechSolutions Inc.",
+        name: "Muttalib Munna",
+        role: "Banker at Dhaka Bank PLC",
         content: "Working with Mobarak was an absolute pleasure. His expertise in the MERN stack helped us deliver our project 2 weeks ahead of schedule. The code quality was exceptional and his problem-solving skills are top-notch.",
         rating: 5,
-        avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+        avatar: `${munnaImage}`
     },
     {
         id: 2,
-        name: "Michael Chen",
-        role: "Product Manager at DevCraft",
+        name: "Tashdid Rahman",
+        role: "MTO at SecureEx",
         content: "Mobarak transformed our legacy application into a modern, performant web app. His attention to detail and clean code practices set a new standard for our team. Highly recommended for complex full-stack projects.",
         rating: 5,
-        avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+        avatar: `${tashdidImage}`
     },
     {
         id: 3,
-        name: "Emily Rodriguez",
-        role: "Founder at StartupHub",
-        content: "As a non-technical founder, I needed someone who could understand my vision and execute it flawlessly. Mobarak not only delivered beyond expectations but also educated me about best practices along the way.",
+        name: "Abdul Matin Shuvo",
+        role: "RSM at Walton BD Ltd.",
+        content: "As a non-technical RSM, I needed someone who could understand my vision and execute it flawlessly. Mobarak not only delivered beyond expectations but also educated me about best practices along the way.",
         rating: 4,
-        avatar: "https://randomuser.me/api/portraits/women/68.jpg"
+        avatar: `${shuvoImage}`
     },
     {
         id: 4,
-        name: "David Kim",
-        role: "Lead Developer at WebForge",
+        name: "Robiul Hakim",
+        role: "Banker at Janata Bank PLC",
         content: "Rarely do you find developers who combine technical excellence with great communication. Mobarak is one of them. His React components were so well-structured that we've adopted them as our internal standard.",
         rating: 5,
-        avatar: "https://randomuser.me/api/portraits/men/75.jpg"
+        avatar: `${robiulImage}`
     },
     {
         id: 5,
-        name: "Lisa Wong",
-        role: "UX Designer at PixelPerfect",
+        name: "Tanvir Bin Jahir",
+        role: "Sr. Executive at Chittagong Port Authority",
         content: "Collaborating with Mobarak on our design system implementation was seamless. He understands the importance of UI/UX principles and implements designs with pixel-perfect precision.",
         rating: 4,
-        avatar: "https://randomuser.me/api/portraits/women/23.jpg"
+        avatar: `${tanvirImage}`
     }
 ];
 

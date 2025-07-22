@@ -10,10 +10,11 @@ import {
     FaPhoneAlt
 } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
+import CustomButton from "../../../components/ui/CustomButton";
 
 const Contact = () => {
     return (
-        <section id="contact" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 overflow-hidden">
+        <section id="contact" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black overflow-hidden">
             {/* Background shapes */}
             <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -140,7 +141,7 @@ const Contact = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 sm:p-8 shadow-sm border border-gray-200 dark:border-gray-700"
+                        className="bg-gray-50 dark:bg-gray-950/80 rounded-xl p-6 sm:p-8 shadow-sm border border-gray-200 dark:border-gray-700"
                     >
                         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                             Send a Message
@@ -155,7 +156,7 @@ const Contact = () => {
                                         type="text"
                                         id="name"
                                         name="name"
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-black/50 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                                         placeholder="Your name"
                                     />
                                 </div>
@@ -167,7 +168,7 @@ const Contact = () => {
                                         type="email"
                                         id="email"
                                         name="email"
-                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-black/50 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                                         placeholder="your.email@example.com"
                                     />
                                 </div>
@@ -180,7 +181,7 @@ const Contact = () => {
                                     type="text"
                                     id="subject"
                                     name="subject"
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-black/50 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                                     placeholder="What's this about?"
                                 />
                             </div>
@@ -192,7 +193,7 @@ const Contact = () => {
                                     id="message"
                                     name="message"
                                     rows="5"
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-black/50 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                                     placeholder="Your message here..."
                                 ></textarea>
                             </div>
@@ -200,7 +201,7 @@ const Contact = () => {
                                 type="submit"
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors shadow-sm"
+                                className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-slate-950 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors shadow-sm"
                             >
                                 Send Message
                                 <FiSend className="text-lg" />
@@ -209,6 +210,9 @@ const Contact = () => {
                     </motion.div>
                 </div>
             </div>
+
+
+
         </section>
     );
 };

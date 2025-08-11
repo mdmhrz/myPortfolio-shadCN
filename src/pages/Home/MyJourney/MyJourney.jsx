@@ -100,7 +100,7 @@ const AboutMe = () => {
 
 
     return (
-        <section id="about" className="py-20 bg-white dark:bg-gray-900 relative overflow-hidden">
+        <section id="about" className="py-20 bg-white dark:bg-black relative overflow-hidden">
             {/* Background elements */}
             <motion.div
                 initial={{ opacity: 0 }}
@@ -133,14 +133,11 @@ const AboutMe = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    {/* <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
-                        My <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">Journey</span>
-                    </h2> */}
 
                     <h2 class="heading">
                         <span class="gradient-text">My Journey</span>
                     </h2>
-                    <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
                         From turning wrenches to writing code - a story of passion and transformation
                     </p>
                     <div className="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mt-6 rounded-full"></div>
@@ -160,7 +157,7 @@ const AboutMe = () => {
                         className="lg:w-2/5 relative z-50 glass-card p-1 rounded-3xl animate-border"
                     >
 
-                        <div className="bg-white dark:bg-slate-900 border border-gray-800 p-8 rounded-2xl shadow-xl h-full">
+                        <div className="bg-white dark:bg-black  p-8 rounded-2xl shadow-xl h-full">
                             <div className="text-center mb-8">
                                 <motion.div
                                     whileHover={{ scale: 1.05, rotate: 2 }}
@@ -248,7 +245,7 @@ const AboutMe = () => {
                     >
 
 
-                        <div className="bg-white dark:bg-slate-900 border border-gray-800 p-8 rounded-2xl shadow-xl dark:border-gray-700 h-full">
+                        <div className="bg-white dark:bg-black border-gray-800 p-8 rounded-2xl shadow-xl dark:border-gray-700 h-full">
                             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
                                 The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">Transformation</span>
                             </h3>

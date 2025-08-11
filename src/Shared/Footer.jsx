@@ -44,7 +44,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="relative bg-gradient-to-b from-gray-900 to-gray-950 pt-20 pb-12 overflow-hidden">
+        <footer className="relative bg-black border border-t-accent pt-10 pb-12 overflow-hidden">
             {/* Floating tech elements */}
             <div className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none">
                 {[...Array(12)].map((_, i) => (

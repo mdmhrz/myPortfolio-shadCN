@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle"; // your ModeToggle path
 import { Code2 } from "lucide-react";
 import { motion } from "framer-motion";
+import CustomButton from "../components/ui/CustomButton";
 
 export default function Navbar() {
     const navLinks = [
@@ -42,6 +43,7 @@ export default function Navbar() {
                             {link.name}
                         </Link>
                     ))}
+                    <button className="bg-primary px-4 py-2 rounded-sm ">Resume</button>
 
                     {/* Theme Toggle */}
                     <ModeToggle />

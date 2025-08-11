@@ -8,7 +8,7 @@ import {
     FaFilePdf,
     FaFileWord,
     FaFileExcel,
-    FaFilePowerpoint,  // valid react-icons/fa icon for Acrobat
+    FaFilePowerpoint,
 } from "react-icons/fa";
 import {
     SiJavascript,
@@ -60,19 +60,12 @@ const ShadCNIcon = ({ size = 28, className = "" }) => (
 
 const categories = [
     {
-        title: "Core Technologies",
-        description: "Fundamental technologies I build with",
+        title: "Frontend",
+        description: "Technologies for building interactive user interfaces",
         skills: [
             { name: "JavaScript", icon: <SiJavascript className="text-yellow-500" /> },
             { name: "React", icon: <FaReact className="text-sky-500" /> },
-            { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
             { name: "Next.js", icon: <SiNextdotjs className="text-black dark:text-white" /> },
-        ],
-    },
-    {
-        title: "Frontend Development",
-        description: "Technologies for building user interfaces",
-        skills: [
             { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
             { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" /> },
             { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" /> },
@@ -80,43 +73,32 @@ const categories = [
             { name: "React Query", icon: <SiReactquery className="text-red-500" /> },
             { name: "React Router", icon: <SiReactrouter className="text-pink-600" /> },
             { name: "Vite", icon: <SiVite className="text-purple-400" /> },
+            { name: "Axios", icon: <SiAxios className="text-indigo-500" /> },
+            { name: "Figma", icon: <SiFigma className="text-pink-500" /> },
+            { name: "ShadCN UI", icon: <ShadCNIcon className="text-cyan-500" /> },
         ],
     },
     {
-        title: "Backend & Databases",
-        description: "Server-side and data management technologies",
+        title: "Backend",
+        description: "Server-side technologies, databases, and deployment tools",
         skills: [
+            { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
             { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
             { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
             { name: "JWT", icon: <SiJsonwebtokens className="text-green-400" /> },
-        ],
-    },
-    {
-        title: "DevOps & Deployment",
-        description: "Tools for deployment and infrastructure",
-        skills: [
-            { name: "Vercel", icon: <SiVercel className="text-black dark:text-white" /> },
             { name: "Firebase", icon: <SiFirebase className="text-amber-500" /> },
+            { name: "Vercel", icon: <SiVercel className="text-black dark:text-white" /> },
             { name: "Git", icon: <FaGitAlt className="text-orange-600" /> },
         ],
     },
     {
-        title: "UI & Developer Tools",
-        description: "Libraries and tools for development workflow",
+        title: "Tools",
+        description: "Design, documentation, testing, and productivity tools",
         skills: [
-            { name: "Figma", icon: <SiFigma className="text-pink-500" /> },
-            { name: "Axios", icon: <SiAxios className="text-indigo-500" /> },
-            { name: "ShadCN UI", icon: <ShadCNIcon className="text-cyan-500" /> },
-            { name: "Jest", icon: <SiJest className="text-red-600" /> },
+
             { name: "Storybook", icon: <SiStorybook className="text-pink-500" /> },
             { name: "ESLint", icon: <SiEslint className="text-purple-500" /> },
             { name: "Prettier", icon: <SiPrettier className="text-amber-700" /> },
-        ],
-    },
-    {
-        title: "Additional Tools & Software",
-        description: "Professional tools for documentation, design, and presentations",
-        skills: [
             { name: "Microsoft Word", icon: <FaFileWord className="text-blue-700" /> },
             { name: "Microsoft Excel", icon: <FaFileExcel className="text-green-600" /> },
             { name: "PowerPoint", icon: <FaFilePowerpoint className="text-red-600" /> },
@@ -151,7 +133,7 @@ const SkillCard = ({ skill }) => {
 
 const Skills = () => {
     return (
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background text-foreground">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black text-foreground">
             <div className="max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

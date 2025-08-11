@@ -68,7 +68,7 @@ const projects = [
 
 const Projects = () => {
     return (
-        <div className=" bg-gray-300 dark:bg-slate-900">
+        <div className=" bg-gray-300 dark:bg-black">
             <section className="py-20 px-4 max-w-7xl mx-auto" id="projects">
                 <motion.div
                     className="text-center mb-16"
@@ -98,7 +98,7 @@ const Projects = () => {
                                 viewport={{ once: true }}
                             >
                                 {/* Project card container */}
-                                <div className={`flex overflow-hidden flex-col lg:flex-row ${isEven ? "lg:flex-row-reverse" : ""} gap-8 lg:gap-12 bg-white dark:bg-gray-900 rounded-2xl shadow-lg dark:shadow-gray-900/30 border border-gray-100 dark:border-gray-700`}>
+                                <div className={`flex overflow-hidden flex-col lg:flex-row ${isEven ? "lg:flex-row-reverse" : ""} gap-8 lg:gap-12 bg-white dark:bg-black rounded-2xl shadow-lg dark:shadow-gray-900/30 border border-gray-100 dark:border-gray-700`}>
                                     {/* Image container */}
                                     <div className="w-full lg:w-1/2 bg-gray-600 dark:bg-gray-800 p-6">
                                         <div className="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">

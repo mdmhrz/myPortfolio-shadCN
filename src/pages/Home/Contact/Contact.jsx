@@ -28,7 +28,7 @@ const Contact = () => {
                 <div className="absolute top-1/2 right-1/4 w-32 h-32 rotate-45 bg-green-500 blur-3xl opacity-10 dark:opacity-20"></div>
             </motion.div>
 
-            <div className="max-w-7xl mx-auto relative">
+            <div className="w-11/12 max-w-[1920px]  mx-auto relative">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -42,6 +42,7 @@ const Contact = () => {
                     <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                         Have a project in mind or want to collaborate? Feel free to reach out.
                     </p>
+                    <div className="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mt-6 rounded-full"></div>
                 </motion.div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -54,7 +55,7 @@ const Contact = () => {
                         transition={{ duration: 0.8 }}
                         className="flex-1 text-gray-900 dark:text-gray-100"
                     >
-                        <h2 className="text-5xl font-extrabold mb-8 tracking-tight">
+                        <h2 className="text-4xl font-extrabold mb-8 tracking-tight">
                             Let's Build Your Business Together
                         </h2>
                         <p className="text-lg mb-12 text-gray-700 dark:text-gray-300 max-w-md">
@@ -69,7 +70,7 @@ const Contact = () => {
                                     <FaMapMarkerAlt size={28} />
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-xl mb-1">Address</h4>
+                                    <h4 className="font-semibold text-lg md:text-xl md:mb-1">Address</h4>
                                     <p className="text-gray-600 dark:text-gray-400">
                                         Pahartali, Chattogram, Bangladesh
                                     </p>
@@ -82,7 +83,7 @@ const Contact = () => {
                                     <FaPhoneAlt size={28} />
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-xl mb-1">Phone</h4>
+                                    <h4 className="font-semibold text-lg md:text-xl md:mb-1">Phone</h4>
                                     <a
                                         href="tel:+1234567890"
                                         className="text-indigo-600 dark:text-indigo-400 hover:underline"
@@ -98,7 +99,7 @@ const Contact = () => {
                                     <FaEnvelope size={28} />
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold text-xl mb-1">Email</h4>
+                                    <h4 className="font-semibold text-lg md:text-xl md:mb-1">Email</h4>
                                     <a
                                         href="mailto:hello@reactdev.com"
                                         className="text-pink-600 dark:text-pink-400 hover:underline"
@@ -201,7 +202,7 @@ const Contact = () => {
                                 type="submit"
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-slate-950 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors shadow-sm"
+                                className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-700 to-blue-700 hover:from-purple-800 hover:to-blue-800 text-white font-medium rounded-lg transition-colors shadow-sm"
                             >
                                 Send Message
                                 <FiSend className="text-lg" />

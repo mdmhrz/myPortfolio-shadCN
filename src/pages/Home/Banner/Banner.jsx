@@ -28,7 +28,7 @@ import CustomButton from "../../../components/ui/CustomButton";
 const MERNStackIcons = [
     {
         icon: <FileJson size={48} />,
-        lightColor: "text-green-600",
+        lightColor: "text-green-700",
         darkColor: "text-green-400",
         name: "MongoDB",
         animation: { y: [0, -25, 0], rotate: [0, 10, -10, 0], scale: [1, 1.15, 1] }
@@ -42,7 +42,7 @@ const MERNStackIcons = [
     },
     {
         icon: <Atom size={48} />,
-        lightColor: "text-blue-600",
+        lightColor: "text-blue-700",
         darkColor: "text-blue-400",
         name: "React",
         animation: { y: [0, -15, 15, 0], rotate: [0, 20, -20, 0], scale: [1, 1.2, 1] }
@@ -56,7 +56,7 @@ const MERNStackIcons = [
     },
     {
         icon: <GitBranch size={48} />,
-        lightColor: "text-orange-600",
+        lightColor: "text-orange-700",
         darkColor: "text-orange-400",
         name: "Git",
         animation: { y: [0, -30, 30, 0], rotate: [0, 15, -15, 0], scale: [1, 1.1, 1] }
@@ -70,14 +70,14 @@ const MERNStackIcons = [
     },
     {
         icon: <Palette size={48} />,
-        lightColor: "text-purple-600",
+        lightColor: "text-purple-700",
         darkColor: "text-purple-400",
         name: "Tailwind",
         animation: { y: [0, -20, 20, 0], rotate: [0, 25, -25, 0], scale: [1, 1.15, 1] }
     },
     {
         icon: <LayoutDashboard size={48} />,
-        lightColor: "text-yellow-600",
+        lightColor: "text-yellow-700",
         darkColor: "text-yellow-400",
         name: "Components",
         animation: { y: [0, 30, -30, 0], rotate: [0, -20, 20, 0], scale: [1, 1.2, 1] }
@@ -89,34 +89,34 @@ const socialLinks = [
         icon: <Github size={20} />,
         name: "GitHub",
         url: "https://github.com/mdmhrz",
-        lightColor: "bg-gray-800 hover:bg-gray-700",
+        lightColor: "bg-gray-900 hover:bg-gray-800",
         darkColor: "bg-gray-700 hover:bg-gray-600"
     },
     {
         icon: <Linkedin size={20} />,
         name: "LinkedIn",
         url: "https://linkedin.com/in/mdmhrz",
-        lightColor: "bg-blue-600 hover:bg-blue-700",
+        lightColor: "bg-blue-700 hover:bg-blue-800",
         darkColor: "bg-blue-500 hover:bg-blue-600"
     },
     {
         icon: <Mail size={20} />,
         name: "Email",
-        url: "razufreelance@gmail.com",
-        lightColor: "bg-red-500 hover:bg-red-600",
+        url: "mailto:razufreelance@gmail.com",
+        lightColor: "bg-red-600 hover:bg-red-700",
         darkColor: "bg-red-600 hover:bg-red-500"
     }
 ];
 
 const Banner = () => {
     return (
-        <section className="relative flex items-center justify-center w-full min-h-[calc(100vh-61px)] bg-white dark:bg-black overflow-hidden">
-            {/* Animated MERN stack icons with unique animations */}
+        <section id="banner" className="relative flex items-center justify-center w-full  sm:min-h-[calc(100vh-61px)]    bg-white dark:bg-black overflow-hidden">
+            {/* Animated MERN stack icons */}
             <div className="absolute inset-0 overflow-hidden z-0">
                 {MERNStackIcons.map((tech, index) => (
                     <motion.div
                         key={index}
-                        className={`absolute ${tech.lightColor} dark:${tech.darkColor} opacity-10 dark:opacity-20`}
+                        className={`absolute ${tech.lightColor} dark:${tech.darkColor} opacity-10 `}
                         style={{
                             top: `${Math.random() * 80 + 10}%`,
                             left: `${Math.random() * 80 + 10}%`
@@ -130,17 +130,18 @@ const Banner = () => {
                             delay: index * 0.7
                         }}
                     >
+
                         {tech.icon}
                     </motion.div>
                 ))}
             </div>
 
-            {/* Floating tech labels with different animation */}
+            {/* Floating tech labels */}
             <div className="absolute inset-0 overflow-hidden z-0">
                 {MERNStackIcons.map((tech, index) => (
                     <motion.div
                         key={`label-${index}`}
-                        className={`absolute text-xs font-mono ${tech.lightColor} dark:${tech.darkColor} opacity-70`}
+                        className={`absolute text-xs font-mono ${tech.lightColor} dark:${tech.darkColor} opacity-5`}
                         style={{
                             top: `${Math.random() * 70 + 15}%`,
                             left: `${Math.random() * 70 + 15}%`
@@ -163,21 +164,21 @@ const Banner = () => {
             </div>
 
             {/* Content container */}
-            <div className="w-11/12 mx-auto px-4 h-full flex flex-col md:flex-row items-center justify-center gap-12 py-20 relative z-10">
-                {/* Left side - Text content */}
+            <div className="w-11/12 max-w-[1920px] mx-auto h-full flex flex-col lg:flex-row items-center  justify-center gap-12 py-20 relative z-10">
+                {/* Left side */}
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="md:w-1/2"
+                    className="lg:w-1/2"
                 >
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-blue-200 mb-6">
-                        Hi, I'm <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-500">
-                            Mobarak Hossain
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-blue-200 mb-6">
+                        Hi, I'm <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-purple-600 dark:to-blue-500">
+                            Mobarak Hossain Razu
                         </span>
                     </h1>
 
-                    <div className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-700 dark:text-blue-200 mb-8 h-12">
+                    <div className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-900 dark:text-blue-200 mb-8 h-12">
                         <TypeAnimation
                             sequence={[
                                 'MERN Stack Specialist',
@@ -193,11 +194,11 @@ const Banner = () => {
                             ]}
                             speed={50}
                             repeat={Infinity}
-                            className="text-gray-800 dark:text-blue-200"
+                            className="text-gray-900 dark:text-blue-200"
                         />
                     </div>
 
-                    <p className="text-lg text-gray-600 dark:text-gray-300 mb-10 max-w-lg">
+                    <p className="text-lg text-gray-700 dark:text-gray-300 mb-10 max-w-lg">
                         I architect and build full-stack JavaScript applications using the MERN stack.
                         Specializing in creating scalable, performant web solutions with modern tools.
                     </p>
@@ -210,20 +211,21 @@ const Banner = () => {
                             <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" style={{ animationDelay: '0.4s' }}></div>
                         </div>
                         <span className="text-sm text-gray-500 dark:text-gray-400 font-mono">
-                            Currently working with: MongoDB, Express, React 18, Node.js 20
+                            Currently working with: NextJS, Typescript, Redux,
                         </span>
                     </div>
 
                     {/* Contact CTA */}
                     <div className="flex flex-wrap gap-4 mb-6">
-                        <CustomButton text={'Hire Me'}></CustomButton>
+                        <CustomButton text={'Hire Me'} />
                         <motion.a
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            href="#projects"
+                            href="https://drive.google.com/file/d/1jd16Ah_ky0umhWDrs8sb8jiSpgMrTgIb/view?usp=sharing"
+                            target="_blank"
                             className="px-6 py-3 bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-lg text-gray-800 dark:text-white font-semibold shadow-lg border border-gray-200 dark:border-gray-700 transition-all"
                         >
-                            View Projects
+                            Download Resume
                         </motion.a>
                     </div>
 
@@ -245,25 +247,19 @@ const Banner = () => {
                     </div>
                 </motion.div>
 
-                {/* Right side - Profile image with tech halo */}
+                {/* Right side */}
                 <motion.div
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="md:w-1/2 flex justify-center"
+                    className="lg:w-1/2 flex justify-center"
                 >
                     <div className="relative">
                         {/* Tech halo animation */}
-                        <motion.div
-                            animate={{
-                                rotate: 360,
-                            }}
-                            transition={{
-                                duration: 30,
-                                repeat: Infinity,
-                                ease: "linear"
-                            }}
-                            className="absolute inset-0 flex items-center justify-center"
+                        {/* <motion.div
+                            animate={{ rotate: 360 }}
+                            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                            className="absolute z-50 inset-0 flex items-center justify-center "
                         >
                             {MERNStackIcons.slice(0, 6).map((tech, index) => (
                                 <motion.div
@@ -285,31 +281,31 @@ const Banner = () => {
                                     {tech.icon}
                                 </motion.div>
                             ))}
-                        </motion.div>
+                        </motion.div> */}
 
                         {/* Profile image */}
-                        <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-blue-400/30 dark:border-blue-500/30 shadow-2xl backdrop-blur-sm">
+                        <div className="relative w-70 h-70 md:w-90 md:h-90 lg:w-104 lg:h-104 xl:w-112 xl:h-112 rounded-full overflow-hidden border-4 border-blue-400/30 dark:border-blue-500/30 shadow-2xl backdrop-blur-sm">
                             <img
                                 src="https://i.ibb.co/r2vvMjkz/unnamed-1.png"
                                 alt="Mobarak Hossain"
                                 className="w-full h-full object-cover"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent dark:from-gray-900/70"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent dark:from-gray-900/20"></div>
                         </div>
 
                         {/* Experience badge */}
                         <motion.div
                             whileHover={{ scale: 1.1 }}
-                            className="absolute -bottom-5 -right-5 bg-gradient-to-r from-purple-600 to-slate-900 dark:from-purple-600 dark:to-slate-900 text-white px-4 py-2 rounded-lg shadow-xl flex items-center gap-2"
+                            className="absolute -bottom-5 xl:-bottom-3 xl:-right-3 -right-5 bg-gradient-to-r from-purple-700 to-blue-700 text-white px-4 py-2 rounded-lg shadow-xl flex items-center gap-2"
                         >
                             <CalendarCheck size={18} />
-                            <span>5+ Years Exp</span>
+                            <span>2+ Years Exp</span>
                         </motion.div>
                     </div>
                 </motion.div>
             </div>
 
-            {/* Animated connection lines with varied patterns */}
+            {/* Connection lines */}
             <svg className="absolute inset-0 w-full h-full pointer-events-none z-0">
                 {Array.from({ length: 16 }).map((_, i) => {
                     const strokeWidth = i % 2 === 0 ? 1 : 0.5;
@@ -325,10 +321,7 @@ const Banner = () => {
                             strokeWidth={strokeWidth}
                             strokeDasharray={dashArray}
                             initial={{ opacity: 0 }}
-                            animate={{
-                                opacity: [0, 0.2, 0],
-                                pathLength: [0, 1, 0]
-                            }}
+                            animate={{ opacity: [0, 0.2, 0], pathLength: [0, 1, 0] }}
                             transition={{
                                 duration: 15 + Math.random() * 20,
                                 repeat: Infinity,

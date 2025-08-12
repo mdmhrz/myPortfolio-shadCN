@@ -5,21 +5,26 @@ import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle"; // your ModeToggle path
 import { Code2 } from "lucide-react";
 import { motion } from "framer-motion";
-import CustomButton from "../components/ui/CustomButton";
+
 
 export default function Navbar() {
+    const scrollToSection = (id) => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+    };
     const navLinks = [
-        { name: "Home", href: "/" },
-        { name: "Projects", href: "/projects" },
-        { name: "Blog", href: "/blog" },
-        { name: "Contact", href: "/contact" },
+        { name: "Home", href: "/", id: 'banner' },
+        { name: "About", href: "/about", id: 'about' },
+        { name: "Skills", href: "/skills", id: 'skills' },
+        { name: "Projects", href: "/projects", id: 'projects' },
+        { name: "Contact", href: "/contact", id: 'contact' },
     ];
 
     return (
-        <header className="w-full border-b bg-background sticky top-0 z-50 shadow-sm">
-            <div className="w-11/12 mx-auto px-4 py-3 flex items-center justify-between">
+        <section id="navbar" className="w-full border-b bg-background sticky top-0 z-50 shadow-sm">
+            <div className="w-11/12 mx-auto max-w-[1920px] py-3 flex items-center justify-between">
                 {/* Logo */}
-                <Link to="/" className="text-xl font-bold tracking-tight text-primary">
+                <Link to={`/`} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="text-xl font-bold tracking-tight text-primary">
                     <div className="flex items-center gap-3">
                         <motion.div
                             whileHover={{ rotate: 15, scale: 1.1 }}
@@ -27,7 +32,7 @@ export default function Navbar() {
                         >
                             <Code2 className="text-blue-400" size={24} />
                         </motion.div>
-                        <span className="text-2xl font-bold text-white ">Razu.dev</span>
+                        <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-purple-600 dark:to-blue-500">Razu.dev</span>
 
                     </div>
                 </Link>
@@ -37,13 +42,15 @@ export default function Navbar() {
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
-                            to={link.href}
-                            className="text-muted-foreground hover:text-foreground transition"
+                            // to={link.href}
+                            onClick={() => scrollToSection(link.id)}
+                            className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white  transition"
                         >
                             {link.name}
                         </Link>
                     ))}
-                    <button className="bg-primary px-4 py-2 rounded-sm ">Resume</button>
+                    <a href="https://drive.google.com/file/d/1jd16Ah_ky0umhWDrs8sb8jiSpgMrTgIb/view?usp=sharing"
+                        target="_blank"><button className="bg-gradient-to-r from-purple-700 to-blue-700 text-white px-4 py-2 rounded-sm cursor-pointer">Resume</button></a>
 
                     {/* Theme Toggle */}
                     <ModeToggle />
@@ -63,17 +70,20 @@ export default function Navbar() {
                                 {navLinks.map((link) => (
                                     <Link
                                         key={link.name}
-                                        to={link.href}
-                                        className="text-base font-medium text-muted-foreground hover:text-foreground"
+                                        // to={link.href}
+                                        onClick={() => scrollToSection(link.id)}
+                                        className="ml-6 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white  transition"
                                     >
                                         {link.name}
                                     </Link>
                                 ))}
+                                <a href="https://drive.google.com/file/d/1jd16Ah_ky0umhWDrs8sb8jiSpgMrTgIb/view?usp=sharing"
+                                    target="_blank"><button className="bg-gradient-to-r from-purple-700 to-blue-700 text-white ml-6 px-4 py-2 rounded-sm cursor-pointer">Resume</button></a>
                             </div>
                         </SheetContent>
                     </Sheet>
                 </div>
             </div>
-        </header>
+        </section>
     );
 }

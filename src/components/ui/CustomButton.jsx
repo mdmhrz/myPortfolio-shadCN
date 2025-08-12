@@ -5,7 +5,9 @@ const CustomButton = ({ text, conditional }) => {
     const baseClass = `
         bg-gradient-to-r
         from-purple-700
-        to-slate-900
+        hover:from-purple-800
+        to-blue-700
+        hover:to-blue-800
         text-white
         font-semibold
         py-2 px-6
@@ -14,9 +16,10 @@ const CustomButton = ({ text, conditional }) => {
         transition-colors
         duration-300
         ease-in-out
-        hover:scale-101
+        hover:scale-110
         active:scale-95
         cursor-pointer
+        
     `;
 
     return (

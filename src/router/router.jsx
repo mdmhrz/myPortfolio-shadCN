@@ -18,6 +18,10 @@ const router = createBrowserRouter([
                 Component: AdminLogin
             },
         ]
+    },
+    {
+        path: '/*',
+        element: <p>Error.......</p>
     }
 
 ])

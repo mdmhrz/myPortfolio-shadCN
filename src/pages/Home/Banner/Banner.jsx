@@ -116,7 +116,7 @@ const Banner = () => {
                 {MERNStackIcons.map((tech, index) => (
                     <motion.div
                         key={index}
-                        className={`absolute ${tech.lightColor} dark:${tech.darkColor} opacity-10 `}
+                        className={`absolute ${tech.lightColor} dark:${tech.darkColor} dark:opacity-20 opacity-10 `}
                         style={{
                             top: `${Math.random() * 80 + 10}%`,
                             left: `${Math.random() * 80 + 10}%`
@@ -181,16 +181,15 @@ const Banner = () => {
                     <div className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-900 dark:text-blue-200 mb-8 h-12">
                         <TypeAnimation
                             sequence={[
+                                'Web Developer',
+                                2000,
+                                'Frontend Developer',
+                                2000,
                                 'MERN Stack Specialist',
-                                2000,
-                                'MongoDB Expert',
-                                2000,
-                                'Express.js Developer',
                                 2000,
                                 'React.js Professional',
                                 2000,
-                                'Node.js Engineer',
-                                2000
+
                             ]}
                             speed={50}
                             repeat={Infinity}
@@ -198,9 +197,8 @@ const Banner = () => {
                         />
                     </div>
 
-                    <p className="text-lg text-gray-700 dark:text-gray-300 mb-10 max-w-lg">
-                        I architect and build full-stack JavaScript applications using the MERN stack.
-                        Specializing in creating scalable, performant web solutions with modern tools.
+                    <p className="text-lg text-gray-700 dark:text-gray-300 mb-10 max-w-xl">
+                        I design and develop responsive, user-friendly web interfaces using modern JavaScript frameworks and libraries. Focused on delivering seamless user experiences and performant, maintainable frontend applications with cutting-edge tools.
                     </p>
 
                     {/* Tech stack indicator */}

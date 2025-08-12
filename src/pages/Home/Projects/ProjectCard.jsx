@@ -38,18 +38,6 @@ const ProjectCard = ({ project, index }) => {
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
 
-                    {/* Multi-layer Gradient Overlay */}
-                    {/* <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                    <div className={`absolute inset-0 bg-gradient-to-br ${categoryColors[project.category]}/20`}></div> */}
-
-                    {/* Status Badge */}
-                    {/* <div className="absolute top-4 left-4">
-                        <div className="flex items-center gap-2 px-3 py-1.5 bg-green-500/20 backdrop-blur-md rounded-full border border-green-400/30">
-                            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                            <span className="text-green-300 text-sm font-semibold">{project.status}</span>
-                        </div>
-                    </div> */}
-
                     {/* Category Badge */}
                     <div className="absolute top-4 right-4">
                         <div className={`px-4 py-2 bg-gradient-to-r ${categoryColors[project.category]} rounded-full text-white text-sm font-bold shadow-lg`}>
@@ -63,7 +51,7 @@ const ProjectCard = ({ project, index }) => {
                 </div>
 
                 {/* Content Section */}
-                <div className="p-8 relative bg-neutral-700/5 dark:bg-black">
+                <div className="p-8 relative bg-neutral-700/5 dark:bg-slate-900">
                     {/* Title Overlay */}
                     <div className="mb-6">
                         <h3 className="text-3xl font-black dark:text-white mb-1 leading-tight">

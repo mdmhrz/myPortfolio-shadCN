@@ -254,7 +254,7 @@ const AboutMe = () => {
                                                 <div className="bg-gray-100 dark:bg-black/5 p-6 rounded-xl border border-gray-200 dark:border-gray-600">
                                                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
                                                         <h4 className="font-bold text-gray-900 dark:text-white">{item.title}</h4>
-                                                        <span className="text-sm bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full">
+                                                        <span className="text-sm min-w-[130px] max-w-[130px] flex items-center justify-center bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full">
                                                             {item.year}
                                                         </span>
                                                     </div>

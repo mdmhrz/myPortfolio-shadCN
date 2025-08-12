@@ -135,9 +135,9 @@ const ProjectDetails = () => {
                                             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                                         />
                                     </div>
-                                    <div className="absolute bottom-4 left-4 flex items-center gap-3 mb-3 bg-black/80 px-4 py-2 rounded-2xl">
-                                        <Sparkles className="text-yellow-500 animate-pulse" size={24} />
-                                        <span className="text-yellow-500 font-medium tracking-wider">FEATURED PROJECT</span>
+                                    <div className="absolute top-4 left-4 flex items-center gap-3 mb-3 bg-black/80 px-4 py-2 rounded-2xl">
+                                        <Sparkles className="text-yellow-500 animate-pulse" size={18} />
+                                        <span className="text-yellow-500 text-xs font-medium tracking-wider">FEATURED PROJECT</span>
                                     </div>
 
                                 </div>
@@ -344,6 +344,7 @@ const ProjectDetails = () => {
 
                         {/* Right Column - Stats & Info */}
                         <div className="space-y-6">
+                            {/* Back to home button */}
                             <motion.div
                                 className="flex items-center justify-start"
                                 initial={{ opacity: 0, x: -20 }}
@@ -352,7 +353,7 @@ const ProjectDetails = () => {
                             >
                                 <Link
                                     to="/"
-                                    className="flex w-full text-white items-center justify-center gap-2 px-4 py-3 bg-black dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-full shadow-lg hover:shadow-xl transition-all"
+                                    className="flex w-full text-gray-900 items-center justify-center gap-2 px-4 py-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all"
                                 >
                                     <ChevronLeft size={20} />
                                     <span className="hidden sm:inline">Back to Home</span>

@@ -209,7 +209,7 @@ const Banner = () => {
                             <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" style={{ animationDelay: '0.4s' }}></div>
                         </div>
                         <span className="text-sm text-gray-500 dark:text-gray-400 font-mono">
-                            Currently working with: NextJS, Typescript, Redux,
+                            Currently working with: NextJS, Typescript, Redux
                         </span>
                     </div>
 

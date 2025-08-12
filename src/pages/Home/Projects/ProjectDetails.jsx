@@ -11,11 +11,8 @@ import {
     Target,
     TrendingUp,
     ArrowUpRight,
-    Play,
     Star,
     Eye,
-    Calendar,
-    Users,
     Activity,
     Layers,
     Cpu,
@@ -356,7 +353,7 @@ const ProjectDetails = () => {
                                     className="flex w-full text-gray-900 items-center justify-center gap-2 px-4 py-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all"
                                 >
                                     <ChevronLeft size={20} />
-                                    <span className="hidden sm:inline">Back to Home</span>
+                                    <span className="">Back to Home</span>
                                 </Link>
                             </motion.div>
                             {/* Project Stats */}

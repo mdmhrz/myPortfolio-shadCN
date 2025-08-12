@@ -2,9 +2,9 @@
     {
         "id": 1,
         "title": "HallPoint",
-        "description": "Hostel management system with meal tracking, delivery, and admin dashboard.",
-        "briefDescription": "HallPoint is a comprehensive hostel management system designed to streamline meal tracking, parcel delivery, and provide an intuitive admin dashboard for managing users, meals, and payments efficiently.",
-        "image": "/src/assets/projects/hallpoint.png",
+        "description": "HallPoint is a hostel management system where students can manage meal memberships and track activities, while admins oversee requests and upcoming meals through an intuitive dashboard.",
+        "briefDescription": "HallPoint streamlines hostel operations by enabling students to manage their meal memberships effortlessly, including purchasing and upgrading options. The system features comprehensive dashboards tailored for students and administrators, offering real-time tracking of meal requests, upcoming meal schedules, and user activities. This centralized platform enhances communication, simplifies meal management, and improves the overall hostel experience for everyone involved.",
+        "image": "/projects/hallpoint.png",
         "links": {
             "live": "https://hall-point.web.app/",
             "client": "https://github.com/mdmhrz/hall-point-client",
@@ -53,9 +53,9 @@
     {
         "id": 2,
         "title": "AltPick",
-        "description": "Product recommendation platform with community voting features.",
-        "briefDescription": "AltPick is a collaborative platform where users can submit product queries and recommendations, vote on community-suggested products, and help each other make informed purchasing decisions.",
-        "image": "/src/assets/projects/altpick.png",
+        "description": "AltPick is a community-driven platform where users share product recommendations, vote on suggestions, and help others make informed purchasing decisions.",
+        "briefDescription": "AltPick is a collaborative product recommendation platform designed to connect users seeking advice with a community of contributors. Users can post product queries, receive tailored recommendations, and vote on the best suggestions. The platform promotes engagement through a transparent voting system, fostering trust and credibility in shared recommendations. With an intuitive interface and real-time updates, AltPick makes discovering the right products faster, easier, and more reliable.",
+        "image": "/projects/altpick.png",
         "links": {
             "live": "https://altpick-b57eb.web.app/",
             "client": "https://github.com/mdmhrz/alt-pick-client",
@@ -105,9 +105,9 @@
     {
         "id": 3,
         "title": "JobTrack",
-        "description": "Job application tracker with analytics and admin panel.",
-        "briefDescription": "JobTrack helps users organize and track job applications efficiently, providing detailed analytics and a user-friendly admin panel to monitor overall platform activity and user metrics.",
-        "image": "/src/assets/projects/jobtrack.png",
+        "description": "JobTrack is a platform that helps users track job applications, monitor progress, and view analytics through a clean, user-friendly dashboard.",
+        "briefDescription": "JobTrack is a job application tracking system designed to keep users organized throughout their career search. It allows users to log and categorize applications, monitor their progress, and view detailed analytics on application trends. With a responsive interface, smooth animations, and an integrated admin panel, JobTrack provides both job seekers and administrators with valuable insights, helping streamline the job-hunting process and improve decision-making.",
+        "image": "/projects/jobtrack.png",
         "links": {
             "live": "https://job-track-53365.web.app/",
             "client": "https://github.com/mdmhrz/job-track"

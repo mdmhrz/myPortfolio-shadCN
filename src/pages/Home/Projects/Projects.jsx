@@ -6,9 +6,9 @@ import {
     Zap,
     Palette
 } from "lucide-react";
-import hallPointImg from '../../../assets/projects/hallpoint.png'
-import altPickImg from '../../../assets/projects/altpick.png'
-import jobTrackImg from '../../../assets/projects/jobtrack.png'
+import hallPointImg from '/projects/hallpoint.png'
+import altPickImg from '/projects/altpick.png'
+import jobTrackImg from '/projects/jobtrack.png'
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
 
@@ -17,8 +17,8 @@ const projects = [
     {
         id: 1,
         title: "HallPoint",
-        description: "Hostel management system with meal tracking, delivery, and admin dashboard.",
-        briefDescription: "A comprehensive hostel management platform featuring real-time meal tracking, delivery coordination, and administrative tools. Built with modern technologies for optimal performance and user experience.",
+        description: "HallPoint is a hostel management system where students can manage meal memberships and track activities, while admins oversee requests and upcoming meals through an intuitive dashboard.",
+        briefDescription: "HallPoint streamlines hostel operations by enabling students to manage their meal memberships effortlessly, including purchasing and upgrading options. The system features comprehensive dashboards tailored for students and administrators, offering real-time tracking of meal requests, upcoming meal schedules, and user activities. This centralized platform enhances communication, simplifies meal management, and improves the overall hostel experience for everyone involved.",
         image: hallPointImg,
         category: "Full Stack",
         status: "Live",
@@ -39,8 +39,8 @@ const projects = [
     {
         id: 2,
         title: "AltPick",
-        description: "Product recommendation platform with community voting features.",
-        briefDescription: "An innovative product recommendation platform where community members can vote on alternatives and discover better options. Features advanced filtering and personalized recommendations.",
+        description: "AltPick is a community-driven platform where users share product recommendations, vote on suggestions, and help others make informed purchasing decisions.",
+        briefDescription: "AltPick is a collaborative product recommendation platform designed to connect users seeking advice with a community of contributors. Users can post product queries, receive tailored recommendations, and vote on the best suggestions. The platform promotes engagement through a transparent voting system, fostering trust and credibility in shared recommendations. With an intuitive interface and real-time updates, AltPick makes discovering the right products faster, easier, and more reliable.",
         image: altPickImg,
         category: "Web App",
         status: "Live",
@@ -61,8 +61,8 @@ const projects = [
     {
         id: 3,
         title: "JobTrack",
-        description: "Job application tracker with analytics and admin panel.",
-        briefDescription: "A powerful job application tracking system with comprehensive analytics, status management, and administrative controls. Helps job seekers organize their application process effectively.",
+        description: "JobTrack is a platform that helps users track job applications, monitor progress, and view analytics through a clean, user-friendly dashboard.",
+        briefDescription: "JobTrack is a job application tracking system designed to keep users organized throughout their career search. It allows users to log and categorize applications, monitor their progress, and view detailed analytics on application trends. With a responsive interface, smooth animations, and an integrated admin panel, JobTrack provides both job seekers and administrators with valuable insights, helping streamline the job-hunting process and improve decision-making.",
         image: jobTrackImg,
         category: "Productivity",
         status: "Live",

@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import MainLayout from "../layout/MainLayout";
 import Home from "../pages/Home/Home/Home";
 import AdminLogin from "../pages/AdminLogin/AdminLogin";
+import ProjectDetails from "../pages/Home/Projects/ProjectDetails";
 
 
 const router = createBrowserRouter([
@@ -16,6 +17,11 @@ const router = createBrowserRouter([
             {
                 path: 'auth/admin-login',
                 Component: AdminLogin
+            },
+            {
+                path: 'project/:id',
+                loader: () => fetch('/projects.json'),
+                Component: ProjectDetails
             },
         ]
     },

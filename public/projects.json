@@ -1,0 +1,148 @@
+[
+    {
+        "id": 1,
+        "title": "HallPoint",
+        "description": "Hostel management system with meal tracking, delivery, and admin dashboard.",
+        "briefDescription": "HallPoint is a comprehensive hostel management system designed to streamline meal tracking, parcel delivery, and provide an intuitive admin dashboard for managing users, meals, and payments efficiently.",
+        "image": "/src/assets/projects/hallpoint.png",
+        "links": {
+            "live": "https://hall-point.web.app/",
+            "client": "https://github.com/mdmhrz/hall-point-client",
+            "server": "https://github.com/mdmhrz/hall-point-server"
+        },
+        "tech": [
+            "React",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "TailwindCSS",
+            "DaisyUI",
+            "TanStack Query",
+            "JWT",
+            "Firebase",
+            "Stripe",
+            "React Router",
+            "React Hook Form",
+            "Framer Motion",
+            "React Icons",
+            "Axios",
+            "Day.js",
+            "Lottie React",
+            "SweetAlert2",
+            "Swiper",
+            "ESLint",
+            "Vite"
+        ],
+        "challenges": [
+            "Handling real-time updates for meal and delivery statuses across multiple users.",
+            "Managing authentication securely with JWT and Firebase simultaneously.",
+            "Integrating Stripe payment processing with proper error handling.",
+            "Optimizing performance and load times given the rich UI and animations."
+        ],
+        "potentialImprovements": [
+            "Add mobile app support for easier access on the go.",
+            "Implement automated notifications and reminders via email or SMS.",
+            "Improve analytics dashboard with more granular user activity tracking."
+        ],
+        "futurePlans": [
+            "Integrate advanced meal customization options for users.",
+            "Add multilingual support for wider accessibility.",
+            "Implement offline mode to allow data caching during poor network connectivity."
+        ]
+    },
+    {
+        "id": 2,
+        "title": "AltPick",
+        "description": "Product recommendation platform with community voting features.",
+        "briefDescription": "AltPick is a collaborative platform where users can submit product queries and recommendations, vote on community-suggested products, and help each other make informed purchasing decisions.",
+        "image": "/src/assets/projects/altpick.png",
+        "links": {
+            "live": "https://altpick-b57eb.web.app/",
+            "client": "https://github.com/mdmhrz/alt-pick-client",
+            "server": "https://github.com/mdmhrz/alt-pick-server"
+        },
+        "tech": [
+            "React",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Firebase",
+            "Firebase Admin",
+            "React Router",
+            "TailwindCSS",
+            "DaisyUI",
+            "Axios",
+            "Framer Motion",
+            "Lottie React",
+            "React Helmet",
+            "React Toastify",
+            "SweetAlert2",
+            "Swiper",
+            "ESLint",
+            "Vite",
+            "Nodemon",
+            "Dotenv",
+            "CORS",
+            "Date-fns"
+        ],
+        "challenges": [
+            "Synchronizing real-time updates between recommendations and votes.",
+            "Implementing secure admin features with Firebase Admin SDK.",
+            "Handling scalability of MongoDB queries for large datasets.",
+            "Ensuring seamless integration of third-party libraries like Swiper and Lottie."
+        ],
+        "potentialImprovements": [
+            "Add personalized recommendation algorithms based on user preferences.",
+            "Implement social sharing options to increase community engagement.",
+            "Enhance UI accessibility and responsiveness on smaller devices."
+        ],
+        "futurePlans": [
+            "Introduce a mobile app version to boost user interaction.",
+            "Add API endpoints for external integrations and third-party apps.",
+            "Expand voting system to include weighted votes and badges."
+        ]
+    },
+    {
+        "id": 3,
+        "title": "JobTrack",
+        "description": "Job application tracker with analytics and admin panel.",
+        "briefDescription": "JobTrack helps users organize and track job applications efficiently, providing detailed analytics and a user-friendly admin panel to monitor overall platform activity and user metrics.",
+        "image": "/src/assets/projects/jobtrack.png",
+        "links": {
+            "live": "https://job-track-53365.web.app/",
+            "client": "https://github.com/mdmhrz/job-track"
+        },
+        "tech": [
+            "React",
+            "React Router",
+            "React Icons",
+            "TailwindCSS",
+            "DaisyUI",
+            "Firebase",
+            "Framer Motion",
+            "React Helmet Async",
+            "React Toastify",
+            "React Intersection Observer",
+            "React Scroll",
+            "React CountUp",
+            "ESLint",
+            "Vite"
+        ],
+        "challenges": [
+            "Implementing smooth animations and transitions without impacting performance.",
+            "Ensuring reliable user authentication and data privacy with Firebase.",
+            "Building an analytics dashboard that is both informative and easy to use.",
+            "Maintaining consistent UI/UX across different browsers and devices."
+        ],
+        "potentialImprovements": [
+            "Add advanced filtering and search capabilities for job listings.",
+            "Integrate calendar reminders and notifications for upcoming deadlines.",
+            "Expand admin panel features for more detailed reporting and user management."
+        ],
+        "futurePlans": [
+            "Develop a mobile app for iOS and Android platforms.",
+            "Implement AI-powered job matching and recommendation system.",
+            "Add multi-language support for international users."
+        ]
+    }
+]

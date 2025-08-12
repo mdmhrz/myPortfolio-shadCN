@@ -47,20 +47,14 @@ const AboutMe = () => {
         {
             icon: <Monitor size={20} className="text-purple-400" />,
             title: "Tech Entrepreneurship",
-            year: "2014-2019",
+            year: "2014-2021",
             description: "Ran successful computer services business",
             highlight: "Mastered Office, Adobe & client management"
         },
+
         {
             icon: <Globe size={20} className="text-green-400" />,
-            title: "Web Development Discovery",
-            year: "2020",
-            description: "Inspired by Jhankar Mahbub's programming videos",
-            highlight: "Life-changing moment"
-        },
-        {
-            icon: <BookOpen size={20} className="text-yellow-400" />,
-            title: "Self-Taught Fundamentals",
+            title: "Self-Taught Web Fundamentals",
             year: "2020-2021",
             description: "Built 20+ projects with HTML, CSS, JavaScript",
             highlight: "500+ hours of coding"
@@ -100,9 +94,9 @@ const AboutMe = () => {
 
 
     return (
-        <section className=" bg-neutral-200 dark:bg-black w-full">
+        <section id="about" className=" bg-neutral-200 dark:bg-black w-full">
 
-            <div id="about" className="relative overflow-hidden py-20 w-11/12 mx-auto max-w-[1920px]">
+            <div className="relative overflow-hidden py-20 w-11/12 mx-auto max-w-[1920px]">
                 <div className="">
                     {/* Section Header */}
                     <motion.div
@@ -231,20 +225,13 @@ const AboutMe = () => {
 
                                 <div className="space-y-6 mb-8">
                                     <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                        Growing up in the 90s, I was fascinated by technology - from taking apart radios to mastering every feature of early Nokia phones. My passion truly ignited when I received my first Acer laptop, which became my gateway to the digital world.
+                                        I’ve been passionate about technology since the 90s, which led me to earn a Mechanical Engineering Diploma in 2014 and later run a computer services business for five years, honing my technical and client service skills.
                                     </p>
 
                                     <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                        After earning my <span className="font-medium text-gray-900 dark:text-white">Mechanical Engineering Diploma</span> in 2014, I followed my true calling into technology, starting a computer services business where I honed my skills for five years while helping local clients.
+                                        In 2022, inspired by <strong>Jhankar Mahbub’s</strong> programming tutorials and the <strong>Programming Hero</strong> MERN stack course, I transitioned into professional web development—blending an engineering mindset with a drive to create impactful digital solutions.
                                     </p>
 
-                                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                        A 2020 encounter with <span className="font-medium text-gray-900 dark:text-white">Jhankar Mahbub's</span> programming tutorials sparked my web development journey. Countless hours of self-study led me to enroll in <span className="font-medium text-gray-900 dark:text-white">Programming Hero's</span> MERN stack course in 2021, completing my transition into professional development.
-                                    </p>
-
-                                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                        Today, I continue to grow as a developer, combining my engineering problem-solving skills with a passion for creating digital solutions.
-                                    </p>
                                 </div>
 
 

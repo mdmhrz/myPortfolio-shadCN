@@ -7,12 +7,47 @@ import {
     FaLinkedin,
     FaGithub,
     FaTwitter,
-    FaPhoneAlt
+    FaPhoneAlt,
+    FaFacebook
 } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
-import CustomButton from "../../../components/ui/CustomButton";
+import { toast } from "react-toastify";
+import { useRef } from "react";
+import emailjs from '@emailjs/browser';
+import { useState } from "react";
 
 const Contact = () => {
+    const [loading, setLoading] = useState(false)
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setLoading(true)
+
+        emailjs
+            .sendForm(
+
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,  // ✅ Your Service ID
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // ✅ Your Template ID
+                form.current,
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY      // ✅ Your Public Key
+            )
+            .then(
+                (result) => {
+                    console.log(result.text);
+                    toast.success("Message sent successfully!");
+                    form.current.reset();
+                    setLoading(false)
+                },
+                (error) => {
+                    console.error(error.text);
+                    toast.error("Failed to send message. Please try again.");
+                    setLoading(false)
+                }
+            );
+    };
+
+
     return (
         <section id="contact" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black overflow-hidden">
             {/* Background shapes */}
@@ -112,25 +147,28 @@ const Contact = () => {
                             {/* Socials */}
                             <div className="flex space-x-6 mt-4">
                                 <a
-                                    href="#"
+                                    href="https://github.com/mdmhrz"
+                                    target="_blank"
                                     aria-label="GitHub"
                                     className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition"
                                 >
                                     <FaGithub size={24} />
                                 </a>
                                 <a
-                                    href="#"
+                                    href="https://www.linkedin.com/in/mdmhrz"
+                                    target="_blank"
                                     aria-label="LinkedIn"
                                     className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
                                 >
                                     <FaLinkedin size={24} />
                                 </a>
                                 <a
-                                    href="#"
+                                    href="https://www.facebook.com/mdmhrz"
+                                    target="_blank"
                                     aria-label="Twitter"
                                     className="text-gray-700 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition"
                                 >
-                                    <FaTwitter size={24} />
+                                    <FaFacebook size={24} />
                                 </a>
                             </div>
                         </div>
@@ -142,12 +180,12 @@ const Contact = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className="bg-gray-50 dark:bg-gray-950/80 rounded-xl p-6 sm:p-8 shadow-sm border border-gray-200 dark:border-gray-700"
+                        className="bg-gray-100 dark:bg-gray-950/80 rounded-xl p-6 sm:p-8 shadow-sm border border-gray-200 dark:border-gray-700"
                     >
                         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                             Send a Message
                         </h3>
-                        <form className="space-y-6">
+                        <form ref={form} onSubmit={sendEmail} className="space-y-6">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -175,7 +213,7 @@ const Contact = () => {
                                 </div>
                             </div>
                             <div>
-                                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                <label htmlFor="title" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                                     Subject
                                 </label>
                                 <input
@@ -200,11 +238,12 @@ const Contact = () => {
                             </div>
                             <motion.button
                                 type="submit"
+                                disabled={loading}
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-700 to-blue-700 hover:from-purple-800 hover:to-blue-800 text-white font-medium rounded-lg transition-colors shadow-sm"
                             >
-                                Send Message
+                                {loading ? 'Sending...' : 'Send Message'}
                                 <FiSend className="text-lg" />
                             </motion.button>
                         </form>

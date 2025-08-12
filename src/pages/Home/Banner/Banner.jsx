@@ -110,7 +110,7 @@ const socialLinks = [
 
 const Banner = () => {
     return (
-        <section id="banner" className="relative flex items-center justify-center w-full  sm:min-h-[calc(100vh-61px)]    bg-white dark:bg-black overflow-hidden">
+        <section id="banner" className="relative flex items-center justify-center w-full  sm:min-h-[calc(100vh-61px)]    bg-gradient-to-t from-neutral-100 to-blue-50 dark:from-black dark:to-black overflow-hidden">
             {/* Animated MERN stack icons */}
             <div className="absolute inset-0 overflow-hidden z-0">
                 {MERNStackIcons.map((tech, index) => (

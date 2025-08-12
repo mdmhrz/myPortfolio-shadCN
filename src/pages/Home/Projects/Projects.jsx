@@ -49,7 +49,7 @@ const projects = [
 
 const Projects = () => {
     return (
-        <div className="bg-white dark:bg-black">
+        <div className="bg-gray-200 dark:bg-black">
             <section className="py-24 px-4 max-w-7xl mx-auto" id="projects">
                 <motion.div
                     className="text-center mb-16"

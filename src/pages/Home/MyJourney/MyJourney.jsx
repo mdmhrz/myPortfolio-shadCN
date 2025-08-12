@@ -100,7 +100,7 @@ const AboutMe = () => {
 
 
     return (
-        <section className=" bg-white dark:bg-black w-full">
+        <section className=" bg-neutral-200 dark:bg-black w-full">
 
             <div id="about" className="relative overflow-hidden py-20 w-11/12 mx-auto max-w-[1920px]">
                 <div className="">
@@ -133,7 +133,7 @@ const AboutMe = () => {
                             viewport={{ once: true }}
                             animate={isInView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
                             id="animate-border"
-                            className="lg:w-2/5 relative z-50 glass-card p-1 rounded-3xl max-w-3xl animate-border"
+                            className="lg:w-2/5 relative z-50 glass-card dark:p-1 rounded-3xl lg:max-w-3xl animate-border"
                         >
 
                             <div className="bg-white dark:bg-black  p-8 rounded-2xl shadow-xl h-full">
@@ -151,7 +151,7 @@ const AboutMe = () => {
                                 </div>
 
                                 <div className="space-y-6 mb-8">
-                                    <div className="flex items-start gap-4 p-4 bg-gray-50 dark:bg-black/5 border border-gray-800 rounded-xl">
+                                    <div className="flex items-start gap-4 p-4 bg-gray-100 dark:bg-black/5 dark:border border-gray-800 rounded-xl">
                                         <div className="p-3 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">
                                             <Laptop size={24} />
                                         </div>
@@ -163,7 +163,7 @@ const AboutMe = () => {
                                         </div>
                                     </div>
 
-                                    <div className="flex items-start gap-4 p-4 bg-gray-50 dark:bg-black/5 border border-gray-800 rounded-xl">
+                                    <div className="flex items-start gap-4 p-4 bg-gray-100 dark:bg-black/5 dark:border border-gray-800 rounded-xl">
                                         <div className="p-3 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">
                                             <Smartphone size={24} />
                                         </div>
@@ -175,7 +175,7 @@ const AboutMe = () => {
                                         </div>
                                     </div>
 
-                                    <div className="flex items-start gap-4 p-4 bg-gray-50 dark:bg-black/5 border border-gray-800 rounded-xl">
+                                    <div className="flex items-start gap-4 p-4 bg-gray-100 dark:bg-black/5 dark:border border-gray-800 rounded-xl">
                                         <div className="p-3 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400">
                                             <Globe size={24} />
                                         </div>
@@ -220,7 +220,7 @@ const AboutMe = () => {
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true }}
                             id="animate-border"
-                            className="lg:w-3/5 relative z-50 glass-card p-1 rounded-3xl max-w-6xl animate-border"
+                            className="lg:w-3/5 relative z-50 glass-card dark:p-1 rounded-3xl max-w-6xl animate-border"
                         >
 
 
@@ -264,7 +264,7 @@ const AboutMe = () => {
                                                 <div className="absolute -left-12 top-0 w-8 h-8 rounded-full bg-gradient-to-r from-blue-700 to-purple-900 flex items-center justify-center shadow-md">
                                                     {item.icon}
                                                 </div>
-                                                <div className="bg-gray-50 dark:bg-black/5 p-6 rounded-xl border border-gray-200 dark:border-gray-600">
+                                                <div className="bg-gray-100 dark:bg-black/5 p-6 rounded-xl border border-gray-200 dark:border-gray-600">
                                                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
                                                         <h4 className="font-bold text-gray-900 dark:text-white">{item.title}</h4>
                                                         <span className="text-sm bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full">

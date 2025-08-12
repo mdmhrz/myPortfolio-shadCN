@@ -229,7 +229,7 @@ const Footer = () => {
                                     className="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 />
                                 <motion.div
-                                    whileHover={{ scale: 1.02 }}
+                                    // whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                     type="submit"
                                     className=""

@@ -13,10 +13,10 @@ const CustomButton = ({ text, conditional }) => {
         py-2 px-6
         rounded-lg
         shadow-md
-        transition-colors
+        transition-all
         duration-300
         ease-in-out
-        hover:scale-110
+        hover:scale-105
         active:scale-95
         cursor-pointer
         

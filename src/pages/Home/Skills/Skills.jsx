@@ -120,7 +120,7 @@ const SkillCard = ({ skill }) => {
             viewport={{ once: true }}
             className="relative group"
         >
-            <div className="flex flex-col items-center p-6 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-blue-400 dark:hover:border-blue-500 transition-all duration-300 shadow-sm hover:shadow-lg overflow-hidden">
+            <div className="flex flex-col items-center p-6 rounded-xl bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-blue-400 dark:hover:border-blue-500 transition-all duration-300 shadow-sm hover:shadow-lg overflow-hidden">
                 <div className="relative z-10 flex flex-col items-center gap-3">
                     <div className="p-3 rounded-lg bg-gray-50 dark:bg-gray-800 group-hover:bg-white dark:group-hover:bg-gray-700 transition-colors duration-300">
                         <div className="text-3xl">{skill.icon}</div>
@@ -137,7 +137,7 @@ const SkillCard = ({ skill }) => {
 
 const Skills = () => {
     return (
-        <section id="skills" className="w-full py-24 bg-gray-50 dark:bg-black">
+        <section id="skills" className="w-full py-24 dark:bg-black">
             <div className="w-11/12 max-w-[1920px] mx-auto ">
 
                 <motion.div

@@ -21,7 +21,7 @@ export default function Navbar() {
     ];
 
     return (
-        <section id="navbar" className="w-full border-b bg-background sticky top-0 z-50 shadow-sm">
+        <section id="navbar" className="bg-blue-800 dark:bg-black w-full border-b  sticky top-0 z-50 shadow-sm">
             <div className="w-11/12 mx-auto max-w-[1920px] py-3 flex items-center justify-between">
                 {/* Logo */}
                 <Link to={`/`} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="text-xl font-bold tracking-tight text-primary">
@@ -32,7 +32,7 @@ export default function Navbar() {
                         >
                             <Code2 className="text-blue-400" size={24} />
                         </motion.div>
-                        <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-purple-600 dark:to-blue-500">Razu.dev</span>
+                        <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-orange-600   dark:bg-gradient-to-r  dark:from-purple-600 dark:to-blue-500">Razu.dev</span>
 
                     </div>
                 </Link>
@@ -44,7 +44,7 @@ export default function Navbar() {
                             key={link.name}
                             // to={link.href}
                             onClick={() => scrollToSection(link.id)}
-                            className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white  transition"
+                            className="text-gray-300 dark:text-gray-300 hover:text-black dark:hover:text-white  transition"
                         >
                             {link.name}
                         </Link>

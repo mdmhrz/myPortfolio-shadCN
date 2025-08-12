@@ -7,21 +7,21 @@ import ProjectDetails from "../pages/Home/Projects/ProjectDetails";
 
 const router = createBrowserRouter([
     {
-        path: "/",
-        Component: MainLayout,
+        path: '/',
+        element: <MainLayout />,
         children: [
             {
                 index: true,
-                Component: Home,
+                element: <Home />
             },
             {
                 path: 'auth/admin-login',
-                Component: AdminLogin
+                element: <AdminLogin />
             },
             {
                 path: 'project/:id',
                 loader: () => fetch('/projects.json'),
-                Component: ProjectDetails
+                element: <ProjectDetails />
             },
         ]
     },

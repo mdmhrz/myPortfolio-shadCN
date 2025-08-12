@@ -130,7 +130,6 @@ const ProjectCard = ({ project, index }) => {
                                     href={`/project/${project.id}`}
                                     className="group inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-gray-900 to-black dark:from-white dark:to-gray-100 text-white dark:text-black rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                                 >
-
                                     <span>View Full Details</span>
                                     <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                 </a>

@@ -96,7 +96,7 @@ const Footer = () => {
                                 >
                                     <Code2 className="text-blue-400" size={24} />
                                 </motion.div>
-                                <span className="text-xl font-bold text-white">Razu.dev</span>
+                                <span className="text-xl font-bold text-white">RAZU</span>
                             </div>
                             <p className="text-gray-400 text-sm leading-relaxed">
                                 Crafting high-performance web applications with modern technologies and clean code.

@@ -266,13 +266,13 @@ const Banner = () => {
                         </div>
 
                         {/* Experience badge */}
-                        <motion.div
+                        {/* <motion.div
                             whileHover={{ scale: 1.1 }}
                             className="absolute -bottom-5 xl:-bottom-3 xl:-right-3 -right-5 bg-gradient-to-r from-purple-700 to-blue-700 text-white px-4 py-2 rounded-lg shadow-xl flex items-center gap-2"
                         >
                             <CalendarCheck size={18} />
                             <span>2+ Years Exp</span>
-                        </motion.div>
+                        </motion.div> */}
                     </div>
                 </motion.div>
             </div>

@@ -12,7 +12,7 @@ export function ThemeProvider({
     ...props
 }) {
     const [theme, setTheme] = useState(() => {
-        return localStorage.getItem(storageKey) || defaultTheme;
+        return localStorage.getItem(storageKey) || 'light';
     });
 
     useEffect(() => {

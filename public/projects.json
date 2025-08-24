@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "HallPoint",
-        "description": "HallPoint is a hostel management system where students can manage meal memberships and track activities, while admins oversee requests and upcoming meals through an intuitive dashboard.",
+        "description": "HallPoint is a hostel management system for students’ meals and activities, with admin oversight.",
         "briefDescription": "HallPoint streamlines hostel operations by enabling students to manage their meal memberships effortlessly, including purchasing and upgrading options. The system features comprehensive dashboards tailored for students and administrators, offering real-time tracking of meal requests, upcoming meal schedules, and user activities. This centralized platform enhances communication, simplifies meal management, and improves the overall hostel experience for everyone involved.",
         "image": "/projects/hallpoint.png",
         "links": {
@@ -12,13 +12,13 @@
         },
         "tech": [
             "React",
-            "Node.js",
             "Express.js",
             "MongoDB",
             "TailwindCSS",
-            "DaisyUI",
-            "TanStack Query",
             "JWT",
+            "DaisyUI",
+            "Node.js",
+            "TanStack Query",
             "Firebase",
             "Stripe",
             "React Router",
@@ -53,7 +53,7 @@
     {
         "id": 2,
         "title": "AltPick",
-        "description": "AltPick is a community-driven platform where users share product recommendations, vote on suggestions, and help others make informed purchasing decisions.",
+        "description": "AltPick is a community platform for sharing, voting, and discovering trusted product recommendations.",
         "briefDescription": "AltPick is a collaborative product recommendation platform designed to connect users seeking advice with a community of contributors. Users can post product queries, receive tailored recommendations, and vote on the best suggestions. The platform promotes engagement through a transparent voting system, fostering trust and credibility in shared recommendations. With an intuitive interface and real-time updates, AltPick makes discovering the right products faster, easier, and more reliable.",
         "image": "/projects/altpick.png",
         "links": {
@@ -63,13 +63,13 @@
         },
         "tech": [
             "React",
-            "Node.js",
             "Express.js",
             "MongoDB",
             "Firebase",
+            "TailwindCSS",
             "Firebase Admin",
             "React Router",
-            "TailwindCSS",
+            "Node.js",
             "DaisyUI",
             "Axios",
             "Framer Motion",
@@ -105,7 +105,7 @@
     {
         "id": 3,
         "title": "JobTrack",
-        "description": "JobTrack is a platform that helps users track job applications, monitor progress, and view analytics through a clean, user-friendly dashboard.",
+        "description": "JobTrack helps users track job applications, monitor progress, and access insights via a simple dashboard.",
         "briefDescription": "JobTrack is a job application tracking system designed to keep users organized throughout their career search. It allows users to log and categorize applications, monitor their progress, and view detailed analytics on application trends. With a responsive interface, smooth animations, and an integrated admin panel, JobTrack provides both job seekers and administrators with valuable insights, helping streamline the job-hunting process and improve decision-making.",
         "image": "/projects/jobtrack.png",
         "links": {
@@ -115,11 +115,11 @@
         "tech": [
             "React",
             "React Router",
-            "React Icons",
             "TailwindCSS",
-            "DaisyUI",
-            "Firebase",
             "Framer Motion",
+            "DaisyUI",
+            "React Icons",
+            "Firebase",
             "React Helmet Async",
             "React Toastify",
             "React Intersection Observer",

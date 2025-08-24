@@ -11,80 +11,86 @@ import altPickImg from '/projects/altpick.png'
 import jobTrackImg from '/projects/jobtrack.png'
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 // Mock images for demonstration
-const projects = [
-    {
-        id: 1,
-        title: "HallPoint",
-        description: "HallPoint is a hostel management system where students can manage meal memberships and track activities, while admins oversee requests and upcoming meals through an intuitive dashboard.",
-        briefDescription: "HallPoint streamlines hostel operations by enabling students to manage their meal memberships effortlessly, including purchasing and upgrading options. The system features comprehensive dashboards tailored for students and administrators, offering real-time tracking of meal requests, upcoming meal schedules, and user activities. This centralized platform enhances communication, simplifies meal management, and improves the overall hostel experience for everyone involved.",
-        image: hallPointImg,
-        category: "Full Stack",
-        status: "Live",
-        links: {
-            live: "https://hall-point.web.app/",
-            client: "https://github.com/mdmhrz/hall-point-client",
-        },
-        tech: [
-            "React", "Node.js", "Express.js", "MongoDB", "TailwindCSS",
-            "TanStack Query", "JWT", "Firebase", "Stripe", "SSLCOMMERZ"
-        ],
-        stats: {
-            users: "500+",
-            uptime: "99.9%",
-            features: 25
-        }
-    },
-    {
-        id: 2,
-        title: "AltPick",
-        description: "AltPick is a community-driven platform where users share product recommendations, vote on suggestions, and help others make informed purchasing decisions.",
-        briefDescription: "AltPick is a collaborative product recommendation platform designed to connect users seeking advice with a community of contributors. Users can post product queries, receive tailored recommendations, and vote on the best suggestions. The platform promotes engagement through a transparent voting system, fostering trust and credibility in shared recommendations. With an intuitive interface and real-time updates, AltPick makes discovering the right products faster, easier, and more reliable.",
-        image: altPickImg,
-        category: "Web App",
-        status: "Live",
-        links: {
-            live: "https://altpick-b57eb.web.app/",
-            client: "https://github.com/mdmhrz/alt-pick-client",
-        },
-        tech: [
-            "React", "Node.js", "Express.js", "MongoDB", "JWT",
-            "React-Router", "TailwindCSS", "Axios", "Lottie-Animation"
-        ],
-        stats: {
-            users: "200+",
-            votes: "1.2k",
-            products: 150
-        }
-    },
-    {
-        id: 3,
-        title: "JobTrack",
-        description: "JobTrack is a platform that helps users track job applications, monitor progress, and view analytics through a clean, user-friendly dashboard.",
-        briefDescription: "JobTrack is a job application tracking system designed to keep users organized throughout their career search. It allows users to log and categorize applications, monitor their progress, and view detailed analytics on application trends. With a responsive interface, smooth animations, and an integrated admin panel, JobTrack provides both job seekers and administrators with valuable insights, helping streamline the job-hunting process and improve decision-making.",
-        image: jobTrackImg,
-        category: "Productivity",
-        status: "Live",
-        links: {
-            live: "https://job-track-53365.web.app/",
-            client: "https://github.com/mdmhrz/job-track",
-        },
-        tech: [
-            "React", "React-Router", "React-Icons", "TailwindCSS",
-            "Firebase-Auth", "Framer-motion", "React-Helmet-Async"
-        ],
-        stats: {
-            applications: "50+",
-            companies: "30+",
-            success: "85%"
-        }
-    },
-];
+// const projects = [
+//     {
+//         id: 1,
+//         title: "HallPoint",
+//         description: "HallPoint is a hostel management system where students can manage meal memberships and track activities, while admins oversee requests and upcoming meals through an intuitive dashboard.",
+//         briefDescription: "HallPoint streamlines hostel operations by enabling students to manage their meal memberships effortlessly, including purchasing and upgrading options. The system features comprehensive dashboards tailored for students and administrators, offering real-time tracking of meal requests, upcoming meal schedules, and user activities. This centralized platform enhances communication, simplifies meal management, and improves the overall hostel experience for everyone involved.",
+//         image: hallPointImg,
+//         category: "Full Stack",
+//         status: "Live",
+//         links: {
+//             live: "https://hall-point.web.app/",
+//             client: "https://github.com/mdmhrz/hall-point-client",
+//         },
+//         tech: [
+//             "React", "Node.js", "Express.js", "MongoDB", "TailwindCSS",
+//             "TanStack Query", "JWT", "Firebase", "Stripe", "SSLCOMMERZ"
+//         ],
+//         stats: {
+//             users: "500+",
+//             uptime: "99.9%",
+//             features: 25
+//         }
+//     },
+//     {
+//         id: 2,
+//         title: "AltPick",
+//         description: "AltPick is a community-driven platform where users share product recommendations, vote on suggestions, and help others make informed purchasing decisions.",
+//         briefDescription: "AltPick is a collaborative product recommendation platform designed to connect users seeking advice with a community of contributors. Users can post product queries, receive tailored recommendations, and vote on the best suggestions. The platform promotes engagement through a transparent voting system, fostering trust and credibility in shared recommendations. With an intuitive interface and real-time updates, AltPick makes discovering the right products faster, easier, and more reliable.",
+//         image: altPickImg,
+//         category: "Web App",
+//         status: "Live",
+//         links: {
+//             live: "https://altpick-b57eb.web.app/",
+//             client: "https://github.com/mdmhrz/alt-pick-client",
+//         },
+//         tech: [
+//             "React", "Node.js", "Express.js", "MongoDB", "JWT",
+//             "React-Router", "TailwindCSS", "Axios", "Lottie-Animation"
+//         ],
+//         stats: {
+//             users: "200+",
+//             votes: "1.2k",
+//             products: 150
+//         }
+//     },
+//     {
+//         id: 3,
+//         title: "JobTrack",
+//         description: "JobTrack is a platform that helps users track job applications, monitor progress, and view analytics through a clean, user-friendly dashboard.",
+//         briefDescription: "JobTrack is a job application tracking system designed to keep users organized throughout their career search. It allows users to log and categorize applications, monitor their progress, and view detailed analytics on application trends. With a responsive interface, smooth animations, and an integrated admin panel, JobTrack provides both job seekers and administrators with valuable insights, helping streamline the job-hunting process and improve decision-making.",
+//         image: jobTrackImg,
+//         category: "Productivity",
+//         status: "Live",
+//         links: {
+//             live: "https://job-track-53365.web.app/",
+//             client: "https://github.com/mdmhrz/job-track",
+//         },
+//         tech: [
+//             "React", "React-Router", "React-Icons", "TailwindCSS",
+//             "Firebase-Auth", "Framer-motion", "React-Helmet-Async"
+//         ],
+//         stats: {
+//             applications: "50+",
+//             companies: "30+",
+//             success: "85%"
+//         }
+//     },
+// ];
 
 
 
 const Projects = () => {
+    const [projects, setProject] = useState([]);
+    useEffect(() => {
+        fetch('./projects.json').then(res => res.json()).then(result => setProject(result))
+    }, [])
+
     return (
         <section className="py-24 px-4 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100 dark:bg-black relative overflow-hidden" id="projects">
             {/* Enhanced Background Effects for Dark Theme */}

@@ -22,6 +22,16 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
+        const name = form.current.name.value.trim();
+        const email = form.current.email.value.trim();
+        const subject = form.current.subject.value.trim();
+        const message = form.current.message.value.trim();
+
+        // Simple validation
+        if (!name || !email || !subject || !message) {
+            toast.warn("Please fill in all fields before sending your message.");
+            return;
+        }
         setLoading(true)
 
         emailjs
@@ -35,7 +45,7 @@ const Contact = () => {
             .then(
                 (result) => {
                     console.log(result.text);
-                    toast.success("Message sent successfully!");
+                    toast.success("Thanks for reaching out! I'll respond within 24 hours");
                     form.current.reset();
                     setLoading(false)
                 },
@@ -107,7 +117,7 @@ const Contact = () => {
                                 <div>
                                     <h4 className="font-semibold text-lg md:text-xl md:mb-1">Address</h4>
                                     <p className="text-gray-600 dark:text-gray-400">
-                                        Pahartali, Chattogram, Bangladesh
+                                        Chattogram, Bangladesh-4209
                                     </p>
                                 </div>
                             </div>
@@ -136,10 +146,10 @@ const Contact = () => {
                                 <div>
                                     <h4 className="font-semibold text-lg md:text-xl md:mb-1">Email</h4>
                                     <a
-                                        href="mailto:hello@reactdev.com"
+                                        href="mailto:mobarakhossainrazu@gmail.com"
                                         className="text-pink-600 dark:text-pink-400 hover:underline"
                                     >
-                                        razufreelance@gmail.com
+                                        mdmobarakhossainrazu@gmail.com
                                     </a>
                                 </div>
                             </div>
@@ -180,7 +190,7 @@ const Contact = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className="bg-gray-100 dark:bg-gray-950/80 rounded-xl p-6 sm:p-8 shadow-sm border border-gray-200 dark:border-gray-700"
+                        className="bg-gray-400/5 dark:bg-gray-950/80 rounded-xl p-6 sm:p-8 shadow-sm border border-gray-200 dark:border-gray-700"
                     >
                         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                             Send a Message

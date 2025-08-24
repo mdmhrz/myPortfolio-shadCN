@@ -24,6 +24,7 @@ const ProjectCard = ({ project, index }) => {
         "Productivity": "from-purple-500 to-pink-500"
     };
 
+
     return (
         <div className="group relative">
             {/* Glow Effect */}
@@ -51,13 +52,13 @@ const ProjectCard = ({ project, index }) => {
                 </div>
 
                 {/* Content Section */}
-                <div className="p-8 relative bg-neutral-700/5 dark:bg-slate-900">
+                <div className="p-4 relative bg-white dark:bg-slate-900">
                     {/* Title Overlay */}
                     <div className="mb-6">
                         <h3 className="text-3xl font-black dark:text-white mb-1 leading-tight">
                             {project.title}
                         </h3>
-                        <p className="dark:text-blue-200 font-medium">
+                        <p className="text-neutral-600 dark:text-blue-200">
                             {project.description}
                         </p>
                     </div>
@@ -112,7 +113,7 @@ const ProjectCard = ({ project, index }) => {
                                     Technology Stack
                                 </h4>
                                 <div className="flex flex-wrap gap-3">
-                                    {project.tech.map((tech, i) => (
+                                    {project.tech.slice(0, 5).map((tech, i) => (
                                         <div
                                             key={i}
                                             className="group relative p-2 py-px bg-gradient-to-r from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-950/30 rounded-xl border border-gray-200 dark:border-gray-700 text-center font-semibold text-gray-700 dark:text-gray-300 hover:shadow-lg transition-all duration-300 transform hover:scale-105"

@@ -67,7 +67,7 @@ export default function Navbar() {
                         <Code2 className="text-blue-400" size={24} />
                     </motion.div>
                     <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white dark:bg-gradient-to-r dark:from-purple-600 dark:to-blue-500">
-                        Razu.dev
+                        RAZU
                     </span>
                 </Link>
 

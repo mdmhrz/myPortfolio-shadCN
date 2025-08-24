@@ -110,7 +110,7 @@ const socialLinks = [
 
 const Banner = () => {
     return (
-        <section id="banner" className="relative flex items-center justify-center w-full  sm:min-h-[calc(100vh-61px)]    bg-gradient-to-t from-neutral-100 to-blue-50 dark:from-black dark:to-black overflow-hidden">
+        <section id="banner" className="relative flex items-center justify-center w-full  sm:min-h-[calc(100vh-61px)]    bg-gradient-to-r from-blue-100 to-blue-50 dark:from-black dark:to-black overflow-hidden">
             {/* Animated MERN stack icons */}
             <div className="absolute inset-0 overflow-hidden z-0">
                 {MERNStackIcons.map((tech, index) => (
@@ -198,7 +198,7 @@ const Banner = () => {
                     </div>
 
                     <p className="text-lg text-gray-700 dark:text-gray-300 mb-10 max-w-xl">
-                        I design and develop responsive, user-friendly web interfaces using modern JavaScript frameworks and libraries. Focused on delivering seamless user experiences and performant, maintainable frontend applications with cutting-edge tools.
+                        I build responsive, user-friendly web interfaces and full-stack applications with the MERN stack (MongoDB, Express.js, React, Node.js), delivering seamless user experiences and performant, maintainable solutions using modern JavaScript tools.
                     </p>
 
                     {/* Tech stack indicator */}
@@ -215,7 +215,7 @@ const Banner = () => {
 
                     {/* Contact CTA */}
                     <div className="flex flex-wrap gap-4 mb-6">
-                        <CustomButton text={'Hire Me'} />
+                        <CustomButton id="contact" text={'Hire Me'} />
                         <motion.a
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
@@ -253,33 +253,7 @@ const Banner = () => {
                     className="lg:w-1/2 flex justify-center"
                 >
                     <div className="relative">
-                        {/* Tech halo animation */}
-                        {/* <motion.div
-                            animate={{ rotate: 360 }}
-                            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                            className="absolute z-50 inset-0 flex items-center justify-center "
-                        >
-                            {MERNStackIcons.slice(0, 6).map((tech, index) => (
-                                <motion.div
-                                    key={`halo-${index}`}
-                                    className={`absolute ${tech.lightColor} dark:${tech.darkColor} opacity-70`}
-                                    style={{
-                                        transform: `rotate(${index * 60}deg) translateX(120px) rotate(-${index * 60}deg)`
-                                    }}
-                                    animate={{
-                                        scale: [1, 1.2, 1],
-                                        opacity: [0.6, 0.9, 0.6]
-                                    }}
-                                    transition={{
-                                        duration: 8 + index * 2,
-                                        repeat: Infinity,
-                                        repeatType: "reverse"
-                                    }}
-                                >
-                                    {tech.icon}
-                                </motion.div>
-                            ))}
-                        </motion.div> */}
+
 
                         {/* Profile image */}
                         <div className="relative w-70 h-70 md:w-90 md:h-90 lg:w-104 lg:h-104 xl:w-112 xl:h-112 rounded-full overflow-hidden border-4 border-blue-400/30 dark:border-blue-500/30 shadow-2xl backdrop-blur-sm">
@@ -288,7 +262,7 @@ const Banner = () => {
                                 alt="Mobarak Hossain"
                                 className="w-full h-full object-cover"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent dark:from-gray-900/20"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-gray-800/5 to-transparent dark:from-gray-400/20"></div>
                         </div>
 
                         {/* Experience badge */}

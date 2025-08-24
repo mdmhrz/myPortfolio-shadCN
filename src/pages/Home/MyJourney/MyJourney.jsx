@@ -94,9 +94,9 @@ const AboutMe = () => {
 
 
     return (
-        <section id="about" className=" bg-neutral-200 dark:bg-black w-full">
+        <section id="about" className="bg-neutral-100 dark:bg-black w-full">
 
-            <div className="relative overflow-hidden py-20 w-11/12 mx-auto max-w-[1920px]">
+            <div className="relative py-20 w-11/12 mx-auto max-w-[1920px]">
                 <div className="">
                     {/* Section Header */}
                     <motion.div
@@ -111,7 +111,8 @@ const AboutMe = () => {
                             <span class="gradient-text">My Journey</span>
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                            From turning wrenches to writing code - a story of passion and transformation
+                            From working with tools to crafting code – a journey of passion and transformation
+
                         </p>
                         <div className="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mt-6 rounded-full"></div>
                     </motion.div>
@@ -127,7 +128,7 @@ const AboutMe = () => {
                             viewport={{ once: true }}
                             animate={isInView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
                             id="animate-border"
-                            className="lg:w-2/5 relative z-50 glass-card dark:p-1 rounded-3xl lg:max-w-3xl animate-border"
+                            className="lg:w-2/5 relative z-50 glass-card dark:p-1 rounded-3xl lg:max-w-3xl animate-border shadow-2xl"
                         >
 
                             <div className="bg-white dark:bg-black  p-8 rounded-2xl shadow-xl h-full">
@@ -214,7 +215,7 @@ const AboutMe = () => {
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true }}
                             id="animate-border"
-                            className="lg:w-3/5 relative z-50 glass-card dark:p-1 rounded-3xl max-w-6xl animate-border"
+                            className="lg:w-3/5 relative z-50 glass-card dark:p-1 rounded-3xl max-w-6xl animate-border shadow-2xl"
                         >
 
 

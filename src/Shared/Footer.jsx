@@ -9,7 +9,8 @@ import {
     Code2,
     Lock,
     ArrowUpRight,
-    Heart
+    Heart,
+    MapPin, Calendar,
 } from "lucide-react";
 import CustomButton from "../components/ui/CustomButton";
 
@@ -40,7 +41,6 @@ const Footer = () => {
     ];
 
     const footerLinks = [
-        { name: "Home", path: "/", icon: <ArrowUpRight size={14} />, id: "banner" },
         { name: "About", path: "/about", icon: <ArrowUpRight size={14} />, id: "about" },
         { name: "Skills", path: "/skills", icon: <ArrowUpRight size={14} />, id: "skills" },
         { name: "Projects", path: "/projects", icon: <ArrowUpRight size={14} />, id: "projects" },
@@ -80,7 +80,7 @@ const Footer = () => {
 
                 <div className="relative z-10">
                     {/* Main content */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
                         {/* Brand info */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -125,6 +125,7 @@ const Footer = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
                             viewport={{ once: true }}
+                            className="md:justify-self-center "
                         >
                             <h3 className="text-lg font-semibold text-white mb-6 pb-2 border-b border-gray-800 inline-block">
                                 Navigation
@@ -168,7 +169,7 @@ const Footer = () => {
                                         href="mailto:your@email.com"
                                         className="hover:text-blue-400 transition-colors"
                                     >
-                                        razufreelance@gmail.com
+                                        mdmobarakhossainrazu@gmail.com
                                     </a>
                                 </div>
                                 <p className="flex items-start gap-3">
@@ -209,35 +210,8 @@ const Footer = () => {
                             </address>
                         </motion.div>
 
-                        {/* Newsletter */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.3 }}
-                            viewport={{ once: true }}
-                        >
-                            <h3 className="text-lg font-semibold text-white mb-6 pb-2 border-b border-gray-800 inline-block">
-                                Newsletter
-                            </h3>
-                            <p className="text-gray-400 text-sm mb-4">
-                                Subscribe to get updates on new projects and articles.
-                            </p>
-                            <form className="space-y-3">
-                                <input
-                                    type="email"
-                                    placeholder="Your email"
-                                    className="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                />
-                                <motion.div
-                                    // whileHover={{ scale: 1.02 }}
-                                    whileTap={{ scale: 0.98 }}
-                                    type="submit"
-                                    className=""
-                                >
-                                    <CustomButton conditional={'w-full py-2'} text={'Subscribe'}></CustomButton>
-                                </motion.div>
-                            </form>
-                        </motion.div>
+
+
                     </div>
 
                     {/* Copyright */}
@@ -246,7 +220,7 @@ const Footer = () => {
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
                         viewport={{ once: true }}
-                        className="pt-8 border-t border-gray-800 flex items-center justify-center  text-center"
+                        className="pt-8 border-t border-gray-600 dark:border-gray-800 flex items-center justify-center  text-center"
                     >
                         <p className="text-gray-500 text-sm text-center md:text-left">
                             © {new Date().getFullYear()} Mobarak Hossain Razu. All rights reserved.
@@ -281,7 +255,7 @@ const Footer = () => {
                     </svg>
                 </motion.button>
             </div>
-        </footer>
+        </footer >
     );
 };
 

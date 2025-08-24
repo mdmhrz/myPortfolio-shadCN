@@ -350,7 +350,7 @@ const ProjectDetails = () => {
                             >
                                 <Link
                                     to="/"
-                                    className="flex w-full text-gray-900 items-center justify-center gap-2 px-4 py-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all"
+                                    className="flex w-full text-gray-900 dark:text-white items-center justify-center gap-2 px-4 py-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all"
                                 >
                                     <ChevronLeft size={20} />
                                     <span className="">Back to Home</span>

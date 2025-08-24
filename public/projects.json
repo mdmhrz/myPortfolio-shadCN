@@ -34,10 +34,10 @@
             "Vite"
         ],
         "challenges": [
-            "Handling real-time updates for meal and delivery statuses across multiple users.",
-            "Managing authentication securely with JWT and Firebase simultaneously.",
-            "Integrating Stripe payment processing with proper error handling.",
-            "Optimizing performance and load times given the rich UI and animations."
+            "Implementing JWT authentication using HTTP-only cookies, which caused issues in production.",
+            "Handling deployment complexities and configuration on Vercel.",
+            "Fetching and aggregating dashboard data efficiently using MongoDB aggregation pipelines.",
+            "Implementing fast and accurate search functionality using MongoDB indexing."
         ],
         "potentialImprovements": [
             "Add mobile app support for easier access on the go.",
@@ -86,8 +86,8 @@
             "Date-fns"
         ],
         "challenges": [
-            "Synchronizing real-time updates between recommendations and votes.",
-            "Implementing secure admin features with Firebase Admin SDK.",
+            "Managing recommendation count updates (increment and decrement) when a recommendation is added or deleted.",
+            "Implementing JWT authentication using Firebase token validation.",
             "Handling scalability of MongoDB queries for large datasets.",
             "Ensuring seamless integration of third-party libraries like Swiper and Lottie."
         ],
